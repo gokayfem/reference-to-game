@@ -1,0 +1,21 @@
+{
+  "name": "reference-to-game",
+  "displayName": "Reference to Game",
+  "version": "0.1.0",
+  "description": "Build playable games from any kind of reference while preserving style, colors and identity. Includes intake, asset-generation bookkeeping, runtime helpers and evidence tools.",
+  "author": {
+    "name": "gokayfem",
+    "url": "https://github.com/gokayfem"
+  },
+  "homepage": "https://github.com/gokayfem/reference-to-game",
+  "repository": "https://github.com/gokayfem/reference-to-game",
+  "license": "MIT",
+  "keywords": [
+    "game-development",
+    "references",
+    "threejs",
+    "art-direction",
+    "fal",
+    "agent-skills"
+  ]
+}

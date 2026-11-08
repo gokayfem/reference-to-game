@@ -1,0 +1,108 @@
+{
+  "status": "locked",
+  "anchors": [
+    {
+      "reference_id": "ref-001",
+      "notes": "Primary appearance authority"
+    },
+    {
+      "reference_id": "ref-002",
+      "notes": "Asset vocabulary and secondary views"
+    }
+  ],
+  "palette": [
+    {
+      "role": "paper-cream",
+      "hex": "#f5e5cd",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1420,
+        1704
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "warm-brown",
+      "hex": "#976544",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1508,
+        1703
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "meadow-green",
+      "hex": "#a0a258",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1587,
+        1703
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "sage",
+      "hex": "#b4b092",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1669,
+        1703
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "sky-blue",
+      "hex": "#7ca5c4",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1752,
+        1706
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "peach-orange",
+      "hex": "#ec9e5c",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1835,
+        1709
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "petal-coral",
+      "hex": "#eba68e",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1921,
+        1709
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    }
+  ],
+  "identity": [
+    "painterly meadow with flower rows",
+    "paper cream UI and warm brown text",
+    "coral jacket, teal shorts, yellow backpack",
+    "Leaflet, Peach and Bubble retain their identities"
+  ],
+  "materials": [
+    "Painted directional sprites + 3D terrain and depth-aware foliage"
+  ],
+  "lighting": "Bright soft daylight as specified by this reference; not a toolkit default.",
+  "camera": "Third-person illustration framing with depth-aware painted characters.",
+  "ui": "Leaflet, Peach and Bubble retain their identities",
+  "motion": "Action-driven runtime animation; see app source.",
+  "nonnegotiables": [
+    "painterly meadow with flower rows",
+    "paper cream UI and warm brown text",
+    "coral jacket, teal shorts, yellow backpack",
+    "Leaflet, Peach and Bubble retain their identities"
+  ],
+  "avoid": [],
+  "deliberate_changes": [
+    "The 2.5D interpretation and camera differ from the original painting; assets are designed for constrained views."
+  ]
+}

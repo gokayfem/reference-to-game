@@ -1,0 +1,40 @@
+Petal Pals
+
+COLOR AND COMPOSITION
+Preserve the original's sunny illustrated meadow: layered spring greens, cream sunlight, blue water, coral clothing, a yellow backpack, lavender flower bands and warm peach creature accents. Green terrain is a broad quiet field supporting more saturated flowers and characters. Distant hills become paler and bluer. Keep the cream UI integrated with the illustration, without glossy glass panels or heavy black outlines. The paper/brush texture should belong to surfaces and edges, not appear as a muddy noisy filter over the entire screen.
+
+CHARACTER IDENTITY
+One brown-haired explorer with a flower accessory, coral jacket, teal shorts, brown boots and yellow badge-covered backpack. Exactly one Leaflet, one Peach and one Bubble in the physical party. Leaflet is a pale green rounded seed creature with a leafy cap and tiny limbs. Peach is a peach-and-cream fox with flower-petal ears and tail accents. Bubble is a small blue amphibian with a translucent bubble tail. Preserve their relative size near the explorer's lower leg and their distinct motion silhouettes. Peach's species is Bloomble. Some generated sheet labels incorrectly reuse Bloomble for unrelated animals; call the gray flower-crowned grazer Flower Grazer in this implementation.
+
+RENDERING APPROACH
+Use a 2.5D feeling with softly shaded 3D terrain and reference-matched characters, painted texture accents, illustrated foliage cards and a restrained perspective camera. A fixed-azimuth or gently constrained trailing view helps preserve the composed illustration. Build one meadow vignette to choose between painted low-poly meshes and a carefully prepared directional sprite treatment for small companions. Prefer the option that actually matches the reference, then use it consistently; do not mix one glossy generated character with two flat stickers. Terrain and interaction positions remain spatial and navigable whichever visual treatment is selected.
+
+LIGHTING AND UI
+Broad soft illumination, warm sun, gentle short contact shadows, minimal specular except water and Bubble's transparent tail. No cinematic dark shadows or realistic fur. The HUD has three cream portrait cards at top left, a small quest card and circular map at right, and a compact inventory below. Main labels are dark warm brown; buttons use muted green, orange, blue and pink with rounded corners. Camera mode, illustrated journal and map should share the same palette and typography. Use real text and correct creature names, not generated writing from the sheet.
+
+STYLE FAILURE TO AVOID
+A generic voxel farm, photoreal grassy terrain, shiny toy characters or a dark fantasy monster collector would lose the central appeal. Keep the brush-like world, affectionate expressions, pleasant color grouping and unhurried movement. A smaller convincing meadow is preferable to a large visually inconsistent open world.
+
+STYLE AND COLOR ARE THE HIGHEST PRIORITY
+
+The user explicitly values style and colors above feature breadth. If time or performance forces a tradeoff, reduce the number of environments, secondary mechanics or cosmetic variants while keeping the established visual identity. Do not trade the art direction for an extensive generic prototype. Temporary blockouts may be used internally, but they are not the final appearance.
+
+REFERENCE ORDER
+1. The original gameplay image establishes the main composition, color relationships, lighting and overall feel.
+2. The full development sheet establishes object silhouettes, character identity, materials, modules and UI family. Its tiny generated labels and inconsistent diagrams are not literal rules.
+3. Refined individual scene images explain additional views and mechanics.
+4. The final videos explain motion and pacing, subject to the documented generation errors.
+5. The storyboard grids, early 2x2 drafts and replaced images are historical context. They never override the approved visual direction.
+The new written gameplay specification resolves rule ambiguity. Where an image and a numeric rule disagree, preserve the image's aesthetic while implementing the explicitly stated rule. All tuning values and executable map layouts in this package are new design proposals, not measurements of an existing game.
+
+FIRST VISUAL MILESTONE
+Inspect the actual original image and full sheet with image tools. Read the nine scene images and watch or sample each showcase. Write a short reference analysis stating the dominant color areas, subject proportions, material hierarchy, camera height/framing and UI spacing. Use the supplied semantic palette samples as observed anchors, not automatic PBR albedos. Source images contain lighting, shadows and highlights, so judge the final rendered appearance.
+
+Build one small representative scene with the hero asset, a few environment modules, lighting, camera and final-looking HUD. Use fal for assets that need its capabilities. Capture the scene at a camera comparable to the original. Put reference and implementation side by side. Fix the largest visual differences before expanding the map or adding more asset families. This is an autonomous review checkpoint, not a request for the user to approve every step.
+
+CONTINUOUS STYLE CHECK
+For each new asset, render it inside that same scene, at gameplay scale, under the actual game lighting. Check silhouette, hue/value, material response, relative size, edge treatment and line/detail density. Reject designs that look attractive in isolation but belong to another game. Record changes in STYLE_REVIEW.txt. Before final delivery capture at 1920x1080 and 1280x720; confirm the scene is still recognizable from its broad color masses with the HUD hidden.
+
+Use a 0–5 self-review score for palette relationships, silhouettes/proportions, materials, lighting, camera composition and UI family. Aim for at least 4 in every category; attach visual evidence and unresolved differences. This is an editorial review rubric, not an objective quality guarantee. Pixel differences alone are not a sufficient test because camera geometry and animation vary.
+
+Keep readable UI typography as real text with consistent icon silhouettes and spacing. Recreate generated gibberish with the correct concise labels. Preserve bright daylight, expressive simplified shapes and the intended density of detail. Avoid heavy bloom, excessive depth of field, gritty realism, dark grading and unrelated floating landforms. Preserve small-scale color accents without turning every surface equally saturated.

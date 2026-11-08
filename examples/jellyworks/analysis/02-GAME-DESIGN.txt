@@ -1,0 +1,22 @@
+Jellyworks
+
+PLAYABLE SCOPE
+Ship three authored puzzles: CONNECT, COMBINE and OPTIMIZE. The third is the flagship two-recipe board inspired by THE COLOR EXCHANGE. The reference's level number 24 and counters are illustrative; use the three actual implemented level names and state. Include a level selector, build/run/pause/reset, deterministic delivery counting, a local edit/undo history and completion stars.
+
+BUILD RULES
+The board uses integer cell coordinates, one module per cell. Fixed hoppers, processors and bins cannot be erased; movable conveyors and junctions can. Select BELT, TURN, SPLIT, MERGE or ERASE, then click a cell. R rotates the selected/hovered editable module clockwise in 90-degree steps. Undo reverses the last build edit and refunds its move; redo reapplies it. Each placement, removal or rotation consumes one move unless undone; an unchanged placement consumes none. Default orientation and explicit input/output ports are in the level JSON. Hover shows the placement ghost, ports and why an edit is invalid.
+
+EXECUTION RULES
+Build mode pauses simulation. RUN starts from a clean product state on the current layout. While running, controls allow pause or STOP & EDIT; returning to build clears all in-flight candy and delivery counts for that attempt, preserving layout and edit budget. This prevents duplicate deliveries when repeatedly editing. Reset Level restores the original puzzle including moves. No timer pressure is needed. A visibly blocked attempt may be stopped and repaired.
+
+PRODUCTS AND MACHINES
+Each candy has a unique ID, color, shape, temperature and processing history. Red and yellow inputs are warm unformed gummies. A mixer consumes one red and one yellow from its separate input ports and creates one orange unformed gummy after 1.2 seconds; it waits if either ingredient is absent. A star press consumes one orange gummy and emits one orange star after 0.8 seconds. Blue input enters a cooler for one second, becoming cooled blue, then a cube press emits one blue cube after 0.8 seconds. Invalid ingredients remain at the input with clear blocked feedback. They never silently transform into another recipe.
+
+FLOW AND BACKPRESSURE
+One candy may occupy a transport cell; source spawn cadence begins at 1.2 seconds. Candies travel in the module's declared direction and enter only an accepting adjacent port. Use fixed-step reservations so two upstream cells cannot move into the same destination in one tick. Blocked downstream prevents transfer and propagates a queue; do not discard or teleport candy. Machines keep bounded input buffers and do not consume ingredients until output capacity is available. A splitter alternates between its available output branches and waits when both are blocked; alternate preference only after a successful transfer. A merger uses fair round-robin arbitration. A capped or disconnected end is a visible jam, not a crash.
+
+GOALS AND PROGRESSION
+Only a matching product crossing a collection-bin input increments that bin. The same ID cannot deliver twice. A full bin stops accepting further candy; splitters can use the remaining available branch. Level 1 asks for six blue cubes; level 2 asks for eight orange stars; level 3 asks for twelve orange stars total across two bins and eight blue cubes. Goals are explicit in JSON. Stars are based on finishing and edit economy against the supplied solution; do not pretend an unproven optimal solution is known. Save completed level IDs and best edits; resetting a run does not erase progression.
+
+REFERENCE TOOLBAR PRESENTATION
+Preserve the BELT, TURN, SPLIT, MIX, MOLD and ERASE icon family from the reference. MIX and MOLD select/inspect the corresponding fixed machines and explain their recipes in these authored levels; they must show that their locations are fixed. MERGE can live in a secondary routing palette or be deferred until a level uses it. Do not display a clickable control that silently does nothing. A later sandbox may unlock machine placement without changing the three initial puzzle definitions.

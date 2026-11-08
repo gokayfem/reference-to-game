@@ -1,0 +1,387 @@
+{
+  "status": "new authored implementation layout inspired by references; not an extracted 3D map; implementation note: x of route points at z=540/630 eased (0->6, 20->14) so the canyon leap launches on a straighter line; route x/z scaled 1.25x after playtesting so a strong run lasts ~75 s (spec target 75-120 s)",
+  "units": "meters",
+  "upAxis": "Y",
+  "forwardAxis": "+Z",
+  "courseId": "canyon-day-01",
+  "route": [
+    {
+      "position": [
+        0.0,
+        0,
+        0.0
+      ],
+      "halfWidth": 14
+    },
+    {
+      "position": [
+        15.0,
+        0,
+        75.0
+      ],
+      "halfWidth": 11
+    },
+    {
+      "position": [
+        -25.0,
+        0,
+        162.5
+      ],
+      "halfWidth": 10
+    },
+    {
+      "position": [
+        25.0,
+        0,
+        250.0
+      ],
+      "halfWidth": 10
+    },
+    {
+      "position": [
+        0.0,
+        -1,
+        350.0
+      ],
+      "halfWidth": 9
+    },
+    {
+      "position": [
+        -30.0,
+        -3,
+        450.0
+      ],
+      "halfWidth": 12
+    },
+    {
+      "position": [
+        15.0,
+        -3,
+        562.5
+      ],
+      "halfWidth": 11
+    },
+    {
+      "position": [
+        7.5,
+        -3,
+        675.0
+      ],
+      "halfWidth": 12
+    },
+    {
+      "position": [
+        17.5,
+        -3,
+        787.5
+      ],
+      "halfWidth": 14
+    },
+    {
+      "position": [
+        5.0,
+        -3,
+        900.0
+      ],
+      "halfWidth": 18
+    },
+    {
+      "position": [
+        0.0,
+        -3,
+        1062.5
+      ],
+      "halfWidth": 24
+    }
+  ],
+  "progressConvention": "u is normalized arc length on final centerline; recalculate after smoothing",
+  "zones": [
+    {
+      "name": "Starting pool",
+      "uRange": [
+        0,
+        0.1
+      ]
+    },
+    {
+      "name": "Flower bend",
+      "uRange": [
+        0.1,
+        0.26
+      ]
+    },
+    {
+      "name": "Rock slalom",
+      "uRange": [
+        0.26,
+        0.43
+      ]
+    },
+    {
+      "name": "Rapid steps",
+      "uRange": [
+        0.43,
+        0.61
+      ]
+    },
+    {
+      "name": "Canyon leap",
+      "uRange": [
+        0.61,
+        0.77
+      ]
+    },
+    {
+      "name": "Finish lagoon",
+      "uRange": [
+        0.77,
+        1
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "id": "gate-1",
+      "u": 0.08,
+      "halfWidth": 7,
+      "forwardOnly": true
+    },
+    {
+      "id": "gate-2",
+      "u": 0.23,
+      "halfWidth": 7,
+      "forwardOnly": true
+    },
+    {
+      "id": "gate-3",
+      "u": 0.4,
+      "halfWidth": 7,
+      "forwardOnly": true
+    },
+    {
+      "id": "gate-4",
+      "u": 0.58,
+      "halfWidth": 7,
+      "forwardOnly": true
+    },
+    {
+      "id": "gate-5",
+      "u": 0.75,
+      "halfWidth": 7,
+      "forwardOnly": true
+    },
+    {
+      "id": "gate-6",
+      "u": 0.98,
+      "halfWidth": 7,
+      "forwardOnly": true
+    }
+  ],
+  "tokens": [
+    {
+      "id": "sun-01",
+      "u": 0.05,
+      "lateral": -3
+    },
+    {
+      "id": "sun-02",
+      "u": 0.079,
+      "lateral": 0
+    },
+    {
+      "id": "sun-03",
+      "u": 0.108,
+      "lateral": 3
+    },
+    {
+      "id": "sun-04",
+      "u": 0.137,
+      "lateral": -3
+    },
+    {
+      "id": "sun-05",
+      "u": 0.166,
+      "lateral": 0
+    },
+    {
+      "id": "sun-06",
+      "u": 0.195,
+      "lateral": 3
+    },
+    {
+      "id": "sun-07",
+      "u": 0.224,
+      "lateral": -3
+    },
+    {
+      "id": "sun-08",
+      "u": 0.253,
+      "lateral": 0
+    },
+    {
+      "id": "sun-09",
+      "u": 0.282,
+      "lateral": 3
+    },
+    {
+      "id": "sun-10",
+      "u": 0.311,
+      "lateral": -3
+    },
+    {
+      "id": "sun-11",
+      "u": 0.34,
+      "lateral": 0
+    },
+    {
+      "id": "sun-12",
+      "u": 0.369,
+      "lateral": 3
+    },
+    {
+      "id": "sun-13",
+      "u": 0.398,
+      "lateral": -3
+    },
+    {
+      "id": "sun-14",
+      "u": 0.427,
+      "lateral": 0
+    },
+    {
+      "id": "sun-15",
+      "u": 0.456,
+      "lateral": 3
+    },
+    {
+      "id": "sun-16",
+      "u": 0.485,
+      "lateral": -3
+    },
+    {
+      "id": "sun-17",
+      "u": 0.514,
+      "lateral": 0
+    },
+    {
+      "id": "sun-18",
+      "u": 0.543,
+      "lateral": 3
+    },
+    {
+      "id": "sun-19",
+      "u": 0.572,
+      "lateral": -3
+    },
+    {
+      "id": "sun-20",
+      "u": 0.601,
+      "lateral": 0
+    },
+    {
+      "id": "sun-21",
+      "u": 0.63,
+      "lateral": 3
+    },
+    {
+      "id": "sun-22",
+      "u": 0.659,
+      "lateral": -3
+    },
+    {
+      "id": "sun-23",
+      "u": 0.688,
+      "lateral": 0
+    },
+    {
+      "id": "sun-24",
+      "u": 0.717,
+      "lateral": 3
+    },
+    {
+      "id": "sun-25",
+      "u": 0.746,
+      "lateral": -3
+    },
+    {
+      "id": "sun-26",
+      "u": 0.775,
+      "lateral": 0
+    },
+    {
+      "id": "sun-27",
+      "u": 0.804,
+      "lateral": 3
+    },
+    {
+      "id": "sun-28",
+      "u": 0.833,
+      "lateral": -3
+    },
+    {
+      "id": "sun-29",
+      "u": 0.862,
+      "lateral": 0
+    },
+    {
+      "id": "sun-30",
+      "u": 0.891,
+      "lateral": 3
+    }
+  ],
+  "rocks": [
+    {
+      "id": "rock-1",
+      "u": 0.29,
+      "lateral": -3,
+      "radius": 2.2
+    },
+    {
+      "id": "rock-2",
+      "u": 0.34,
+      "lateral": 3,
+      "radius": 2.5
+    },
+    {
+      "id": "rock-3",
+      "u": 0.38,
+      "lateral": -2,
+      "radius": 2
+    },
+    {
+      "id": "rock-4",
+      "u": 0.48,
+      "lateral": 4,
+      "radius": 1.8
+    },
+    {
+      "id": "rock-5",
+      "u": 0.54,
+      "lateral": -4,
+      "radius": 1.9
+    }
+  ],
+  "jump": {
+    "rampU": 0.66,
+    "gapMeters": 8,
+    "targetForwardMeters": 12,
+    "landingHalfWidth": 6,
+    "minApproachSpeed": 12,
+    "launchUpSpeed": 6.5,
+    "gravity": 14,
+    "note": "Place landing in final curve tangent frame and tune with physics; do not derive airtime from animation."
+  },
+  "tuning": {
+    "maxSpeed": 14,
+    "boostSpeed": 20,
+    "acceleration": 5,
+    "brake": 9,
+    "boostCapacity": 100,
+    "boostDrainPerSecond": 35,
+    "boostRefillPerSecond": 12,
+    "boostRefillDelay": 1,
+    "pickupPoints": 100,
+    "cleanLandingPoints": 500
+  },
+  "routeScale": 1.25
+}

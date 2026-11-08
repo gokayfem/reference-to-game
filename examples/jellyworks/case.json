@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "Jellyworks",
+  "engine": "threejs",
+  "brief": "Repair conveyor routes, combine ingredients, transform candy and satisfy three puzzles.",
+  "references": [
+    {
+      "id": "ref-001",
+      "kind": "image",
+      "priority": 1,
+      "role": "original gameplay",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "gameplay-original.png",
+      "path": "references/ref-001-gameplay-original.png",
+      "sha256": "e976dcb269aacf0eb656cf78e50de5c156821c8aa857fc161e22a8c7d28dd526",
+      "inspection": "visually-reviewed"
+    },
+    {
+      "id": "ref-002",
+      "kind": "image",
+      "priority": 2,
+      "role": "development sheet",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "asset-sheet.png",
+      "path": "references/ref-002-asset-sheet.png",
+      "sha256": "da4b8aa752c8c6829b507a54478d9cd8689fd6d455c4710704648ad299a0708c",
+      "inspection": "visually-reviewed"
+    }
+  ],
+  "generation": {
+    "enabled": false,
+    "budget_usd": 0
+  },
+  "notes": [
+    "Historical example created before this reusable skill was packaged. Generation disabled by default; no model requests run when opening or building."
+  ]
+}

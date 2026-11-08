@@ -1,0 +1,26 @@
+{
+  "name": "jungle-jetboat-jump",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5171",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5176 --strictPort",
+    "test": "vitest run",
+    "build:playtest": "tsc --noEmit && vite build --mode playtest --outDir dist-playtest",
+    "preview:playtest": "vite preview --host 127.0.0.1 --port 5177 --strictPort --outDir dist-playtest",
+    "playthrough": "node scripts/playthrough.mjs http://127.0.0.1:5177/ review/playthrough-prod"
+  },
+  "dependencies": {
+    "@fontsource/nunito": "^5.2.7",
+    "three": "^0.181.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.181.0",
+    "playwright-core": "^1.56.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
+  }
+}

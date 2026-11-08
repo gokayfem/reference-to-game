@@ -1,0 +1,19 @@
+Sunshine Train Battle
+
+PLAYABLE SCOPE
+One connected six-car encounter: rear platform, basic combat, cover car, jump car, defense car and engine approach. Target 3–5 minutes for a first clear, with replay and a score summary. The train travels continuously through flower fields toward a distant station; all combat happens on stable connected carriage geometry. A short external camera in results may show the whole train, but normal play stays first-person.
+
+CONTROLS AND STATE
+WASD moves, mouse looks, left click fires, R reloads, Space jumps, Shift briefly sprints, Q holds the defensive shield, M opens the route overlay, Escape unlocks and pauses. A click-to-play screen starts pointer lock and audio. Default walk 5 m/s, sprint 7.5 m/s, jump upward velocity 6.2 m/s and gravity 18 m/s². Start with 100 health, 100 shield energy, a 12-round magazine and 60 reserve cells. These are proposed tuning values. Movement uses a capsule/box sweep with ground detection and roof/vent/rail collision. Provide 0.1 s coyote time and a short jump buffer for forgiving gaps.
+
+WEAPON
+Fire one shot per 0.18 seconds while held, consuming exactly one round. Use a swept projectile at 45 m/s with a two-second lifetime; resolve the nearest collision along its traveled segment so bolts cannot skip thin targets or pass through cover. Base hit damage 25. The visual bolt starts at the weapon muzzle and aims toward the reticle's valid world target; handle muzzle obstruction near a wall. Reload lasts 1.3 seconds and transfers only available reserve ammo up to 12 when it completes. Canceling/restarting a reload cannot create ammunition. The hand animation must follow that timing.
+
+ENEMIES
+Base robot: 50 health, moves into line of sight, telegraphs an attack, fires one slow bolt, then recovers. Shield robot: 75 health, forward 120-degree barrier that blocks incoming shots from its front but permits flanking. Jumper: 40 health, compresses its spring legs for a readable windup, hops to a nearby valid roof location and pauses after landing. Use finite states and clear cooldowns. Start with no more than four active opponents on a car. Enemy projectiles deal 12 health damage when unblocked; cover blocks them. They do not track through solid vents.
+
+PLAYER DEFENSE, LOOT AND RECOVERY
+Holding Q projects a frontal cyan barrier. It drains 15 energy per second plus 10 per blocked bolt; firing is disabled while shielding. Energy recovers 12/s after two seconds without use. Clamp all resources. Defeated enemies drop stable-ID crystals and sometimes cells; blue crystals score 30 and orange 60. Collect within 1.4 m once; reserve ammo is capped at 120. Falling below the train returns to the most recently cleared car with a score penalty. At zero health show a retry prompt and restore that checkpoint's state snapshot, including enemies and collected IDs, to prevent loot farming.
+
+CAR PROGRESSION AND WIN
+Each combat car becomes cleared when its required enemies are defeated. Award a one-time checkpoint, restore modest health/ammo and unlock its exit gate. The jump car includes a 1.2 m roof gap with visible coupling below and a readable landing zone, plus an attached side route where specified. Clear the engine encounter and step into the engine checkpoint to win. Show time, crystals, accuracy from actual shots/hits and recoveries. A new run resets all encounter, loot, checkpoint and audio state. Save best completed score only.

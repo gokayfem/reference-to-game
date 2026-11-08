@@ -1,0 +1,19 @@
+Petal Pals
+
+PLAYABLE SCOPE
+Create a connected 5–10 minute meadow discovery session with a research camp, two bridges, river habitat, sunflower patch, orchard and a distant village/windmill lookout. The village can remain scenic in this first version; the accessible paths, camp and habitats must be real geometry. Complete MEADOW DISCOVERY DAY by photographing five species, recording four habitats and befriending all three companions. Continue exploring after completion. No combat, survival meters or punitive time limit.
+
+MOVEMENT AND INPUT
+WASD moves relative to the fixed camera; Shift walks faster without a harsh sprint. E interacts with the nearest valid target, Tab cycles nearby targets, 1/2/3/4 selects Observe/Offer Fruit/Photograph/Befriend. M opens the world map, J the journal, F plays the flute, Escape closes an overlay or pauses. A mouse-click action menu is also usable. UI focus prevents movement keys from affecting the world while reading. Avoid mandatory pointer lock for this gentle game.
+
+WORLD AND PARTY
+Use the supplied proposed map with actual bridge crossings. The explorer collides with water banks, large rocks, trees and camp objects. All three companions exist once throughout the session, each with a stable persistent ID. They follow staggered target positions and path around obstacles; Bubble may use shallow marked water while the others use bridges. States include follow, idle, curious, interact and catch-up. Catch-up may reposition a stuck companion only when safely off camera, never create a new entity. A portrait or journal illustration is a UI image, not a second world character.
+
+DISCOVERY AND PHOTOGRAPHY
+The five species are Leaflet, Bloomble/Peach, Bubble, Flower Grazer and Meadow Finch. Observe a target within 3 m for a short uninterrupted interval to unlock its journal information. Enter photo mode with a clear reticle; the player frames a subject and presses the shutter. A valid first photograph needs the subject in view, unobstructed, within 12 m and large enough in the frame. Save a thumbnail of the actual rendered scene, not a canned reference image. Additional photos may replace the favorite thumbnail but never inflate the unique species count. Four habitat trigger volumes are sunflower meadow, riverbank, orchard and lookout; each records only once.
+
+FRUIT AND FRIENDSHIP
+Start with three fruit and place twelve harvestable fruit at the orchard. Each fruit has a stable ID and is collected once per session. Offer Fruit works within 2.5 m and consumes exactly one only when the animation commits. Companions start at trust 20/100. First observation adds 10, a fruit adds 30, and the first completed flute interaction adds 10. Befriend becomes available at trust 60 after that companion has been observed and fed. Mark it once and show a short response. Repeated dialogue/button presses during an animation cannot spend extra fruit or award trust. Additional gifts may increase trust but never exceed 100. The session has enough fruit to complete without waiting for a respawn.
+
+JOURNAL, MAP AND COMPLETION
+The journal uses correct names, species portraits, discovered habitats and captured photos. Undiscovered entries are muted silhouettes. The map is derived from the actual world coordinates, has a single player marker and can set a waypoint; it does not teleport the party. A flute gathers the three existing companions and triggers their different idle responses. The completion card reads real counts: 5/5 species, 4/4 habitats, 3/3 friendships. Save journal discoveries, friendship and remaining fruit with a schema version. A separate New Day action starts a clean session after a clear UI choice.

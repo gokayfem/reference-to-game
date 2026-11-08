@@ -1,0 +1,98 @@
+{
+  "status": "locked",
+  "anchors": [
+    {
+      "reference_id": "ref-001",
+      "notes": "Primary appearance authority"
+    },
+    {
+      "reference_id": "ref-002",
+      "notes": "Asset vocabulary and secondary views"
+    }
+  ],
+  "palette": [
+    {
+      "role": "water",
+      "hex": "#54aeb0",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        693,
+        1724
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "sand-orange",
+      "hex": "#f29e30",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        870,
+        1724
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "hull-orange",
+      "hex": "#d05e20",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1040,
+        1725
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "cliff-red",
+      "hex": "#c13539",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1218,
+        1724
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "foliage",
+      "hex": "#729a38",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1411,
+        1725
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "vest-yellow",
+      "hex": "#f6c240",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1617,
+        1725
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    }
+  ],
+  "identity": [
+    "orange/blue boat with exactly two crew",
+    "turquoise water against red sandstone",
+    "yellow vests and dense painted greenery",
+    "cyan outlined speed card"
+  ],
+  "materials": [
+    "3D meshes + painted environment cards + procedural water"
+  ],
+  "lighting": "Bright soft daylight as specified by this reference; not a toolkit default.",
+  "camera": "Chase camera behind the boat, rear three-quarter composition; optional cockpit view.",
+  "ui": "cyan outlined speed card",
+  "motion": "Action-driven runtime animation; see app source.",
+  "nonnegotiables": [
+    "orange/blue boat with exactly two crew",
+    "turquoise water against red sandstone",
+    "yellow vests and dense painted greenery",
+    "cyan outlined speed card"
+  ],
+  "avoid": [],
+  "deliberate_changes": [
+    "Spray curl, gloss and some terrain framing still differ from the original."
+  ]
+}

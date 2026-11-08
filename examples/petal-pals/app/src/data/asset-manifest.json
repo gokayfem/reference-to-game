@@ -1,0 +1,346 @@
+{
+ "explorer-front": {
+  "path": "assets/sprites/explorer-front.webp",
+  "w": 305,
+  "h": 640,
+  "source": "production/sliced/explorer-turn/0.png"
+ },
+ "explorer-side": {
+  "path": "assets/sprites/explorer-side.webp",
+  "w": 248,
+  "h": 640,
+  "source": "production/sliced/explorer-turn/1.png"
+ },
+ "explorer-back": {
+  "path": "assets/sprites/explorer-back.webp",
+  "w": 297,
+  "h": 640,
+  "source": "production/sliced/explorer-turn/2.png"
+ },
+ "explorer-back34": {
+  "path": "assets/sprites/explorer-back34.webp",
+  "w": 271,
+  "h": 640,
+  "source": "production/sliced/explorer-turn/3.png"
+ },
+ "explorer-offer": {
+  "path": "assets/sprites/explorer-offer.webp",
+  "w": 467,
+  "h": 640,
+  "source": "production/sliced/explorer-actions/0.png"
+ },
+ "explorer-camera": {
+  "path": "assets/sprites/explorer-camera.webp",
+  "w": 299,
+  "h": 640,
+  "source": "production/sliced/explorer-actions/1.png"
+ },
+ "explorer-flute": {
+  "path": "assets/sprites/explorer-flute.webp",
+  "w": 333,
+  "h": 640,
+  "source": "production/sliced/explorer-actions/2.png"
+ },
+ "explorer-point": {
+  "path": "assets/sprites/explorer-point.webp",
+  "w": 327,
+  "h": 640,
+  "source": "production/sliced/explorer-actions/3.png"
+ },
+ "leaflet-front": {
+  "path": "assets/sprites/leaflet-front.webp",
+  "w": 389,
+  "h": 512,
+  "source": "production/sliced/leaflet-turn/0.png"
+ },
+ "leaflet-34": {
+  "path": "assets/sprites/leaflet-34.webp",
+  "w": 372,
+  "h": 512,
+  "source": "production/sliced/leaflet-turn/1.png"
+ },
+ "leaflet-side": {
+  "path": "assets/sprites/leaflet-side.webp",
+  "w": 307,
+  "h": 512,
+  "source": "production/sliced/leaflet-turn/2.png"
+ },
+ "leaflet-back": {
+  "path": "assets/sprites/leaflet-back.webp",
+  "w": 389,
+  "h": 512,
+  "source": "production/sliced/leaflet-turn/3.png"
+ },
+ "peach-front": {
+  "path": "assets/sprites/peach-front.webp",
+  "w": 399,
+  "h": 512,
+  "source": "production/sliced/peach-turn/0.png"
+ },
+ "peach-34": {
+  "path": "assets/sprites/peach-34.webp",
+  "w": 420,
+  "h": 512,
+  "source": "production/sliced/peach-turn/1.png"
+ },
+ "peach-side": {
+  "path": "assets/sprites/peach-side.webp",
+  "w": 455,
+  "h": 512,
+  "source": "production/sliced/peach-turn/2.png"
+ },
+ "peach-back": {
+  "path": "assets/sprites/peach-back.webp",
+  "w": 348,
+  "h": 512,
+  "source": "production/sliced/peach-turn/3.png"
+ },
+ "bubble-front": {
+  "path": "assets/sprites/bubble-front.webp",
+  "w": 512,
+  "h": 506,
+  "source": "production/sliced/bubble-turn/0.png"
+ },
+ "bubble-34": {
+  "path": "assets/sprites/bubble-34.webp",
+  "w": 512,
+  "h": 493,
+  "source": "production/sliced/bubble-turn/1.png"
+ },
+ "bubble-side": {
+  "path": "assets/sprites/bubble-side.webp",
+  "w": 512,
+  "h": 437,
+  "source": "production/sliced/bubble-turn/2.png"
+ },
+ "bubble-back": {
+  "path": "assets/sprites/bubble-back.webp",
+  "w": 478,
+  "h": 512,
+  "source": "production/sliced/bubble-turn/3.png"
+ },
+ "grazer-34": {
+  "path": "assets/sprites/grazer-34.webp",
+  "w": 512,
+  "h": 416,
+  "source": "production/sliced/wildlife/0.png"
+ },
+ "grazer-graze": {
+  "path": "assets/sprites/grazer-graze.webp",
+  "w": 512,
+  "h": 351,
+  "source": "production/sliced/wildlife/1.png"
+ },
+ "finch": {
+  "path": "assets/sprites/finch.webp",
+  "w": 412,
+  "h": 477,
+  "source": "production/sliced/wildlife/2.png"
+ },
+ "finch-peck": {
+  "path": "assets/sprites/finch-peck.webp",
+  "w": 425,
+  "h": 472,
+  "source": "production/sliced/wildlife/3.png"
+ },
+ "tree-apple": {
+  "path": "assets/sprites/tree-apple.webp",
+  "w": 606,
+  "h": 640,
+  "source": "production/sliced/props-c/0.png"
+ },
+ "tree-round": {
+  "path": "assets/sprites/tree-round.webp",
+  "w": 540,
+  "h": 640,
+  "source": "production/sliced/props-c/1.png"
+ },
+ "tree-poplar": {
+  "path": "assets/sprites/tree-poplar.webp",
+  "w": 254,
+  "h": 640,
+  "source": "production/sliced/props-c/2.png"
+ },
+ "sunflowers": {
+  "path": "assets/sprites/sunflowers.webp",
+  "w": 431,
+  "h": 512,
+  "source": "production/sliced/props-c/3.png"
+ },
+ "picnic-table": {
+  "path": "assets/sprites/picnic-table.webp",
+  "w": 512,
+  "h": 282,
+  "source": "production/sliced/props-c/4.png"
+ },
+ "crates": {
+  "path": "assets/sprites/crates.webp",
+  "w": 368,
+  "h": 403,
+  "source": "production/sliced/props-c/5.png"
+ },
+ "notice-board": {
+  "path": "assets/sprites/notice-board.webp",
+  "w": 405,
+  "h": 493,
+  "source": "production/sliced/props-c/6.png"
+ },
+ "lilypad": {
+  "path": "assets/sprites/lilypad.webp",
+  "w": 335,
+  "h": 161,
+  "source": "production/sliced/props-c/7.png"
+ },
+ "tent": {
+  "path": "assets/sprites/tent.webp",
+  "w": 640,
+  "h": 458,
+  "source": "production/sliced/props-b-tent/0.png"
+ },
+ "flag": {
+  "path": "assets/sprites/flag.webp",
+  "w": 275,
+  "h": 508,
+  "source": "production/sliced/props-b-bottom/0.png"
+ },
+ "easel": {
+  "path": "assets/sprites/easel.webp",
+  "w": 438,
+  "h": 503,
+  "source": "production/sliced/props-b-bottom/1.png"
+ },
+ "arrow-sign": {
+  "path": "assets/sprites/arrow-sign.webp",
+  "w": 354,
+  "h": 300,
+  "source": "production/sliced/props-b-bottom/2.png"
+ },
+ "basket": {
+  "path": "assets/sprites/basket.webp",
+  "w": 425,
+  "h": 400,
+  "source": "production/sliced/props-b-bottom/3.png"
+ },
+ "bush": {
+  "path": "assets/sprites/bush.webp",
+  "w": 512,
+  "h": 345,
+  "source": "production/sliced/props-a/0.png"
+ },
+ "berry-bush": {
+  "path": "assets/sprites/berry-bush.webp",
+  "w": 512,
+  "h": 344,
+  "source": "production/sliced/props-a/1.png"
+ },
+ "boulders": {
+  "path": "assets/sprites/boulders.webp",
+  "w": 512,
+  "h": 259,
+  "source": "production/sliced/props-a/2.png"
+ },
+ "cairn": {
+  "path": "assets/sprites/cairn.webp",
+  "w": 353,
+  "h": 374,
+  "source": "production/sliced/props-a/3.png"
+ },
+ "icon-binoculars": {
+  "path": "assets/ui/icon-binoculars.webp",
+  "w": 256,
+  "h": 213,
+  "source": "production/sliced/icons/0.png"
+ },
+ "icon-orange": {
+  "path": "assets/ui/icon-orange.webp",
+  "w": 229,
+  "h": 256,
+  "source": "production/sliced/icons/1.png"
+ },
+ "icon-camera": {
+  "path": "assets/ui/icon-camera.webp",
+  "w": 256,
+  "h": 177,
+  "source": "production/sliced/icons/2.png"
+ },
+ "icon-heart": {
+  "path": "assets/ui/icon-heart.webp",
+  "w": 256,
+  "h": 212,
+  "source": "production/sliced/icons/3.png"
+ },
+ "icon-journal": {
+  "path": "assets/ui/icon-journal.webp",
+  "w": 228,
+  "h": 256,
+  "source": "production/sliced/icons/4.png"
+ },
+ "icon-flute": {
+  "path": "assets/ui/icon-flute.webp",
+  "w": 242,
+  "h": 256,
+  "source": "production/sliced/icons/5.png"
+ },
+ "icon-flower": {
+  "path": "assets/ui/icon-flower.webp",
+  "w": 256,
+  "h": 242,
+  "source": "production/sliced/icons/6.png"
+ },
+ "icon-pin": {
+  "path": "assets/ui/icon-pin.webp",
+  "w": 190,
+  "h": 256,
+  "source": "production/sliced/icons/7.png"
+ },
+ "icon-check": {
+  "path": "assets/ui/icon-check.webp",
+  "w": 256,
+  "h": 223,
+  "source": "production/sliced/icons/8.png"
+ },
+ "icon-map": {
+  "path": "assets/ui/icon-map.webp",
+  "w": 256,
+  "h": 200,
+  "source": "production/sliced/icons/9.png"
+ },
+ "icon-magnifier": {
+  "path": "assets/ui/icon-magnifier.webp",
+  "w": 244,
+  "h": 256,
+  "source": "production/sliced/icons/10.png"
+ },
+ "icon-sunflower": {
+  "path": "assets/ui/icon-sunflower.webp",
+  "w": 254,
+  "h": 256,
+  "source": "production/sliced/icons/11.png"
+ },
+ "flower-atlas": {
+  "path": "assets/textures/flower-atlas.webp",
+  "cols": 5,
+  "rows": 4,
+  "note": "rows: daisy, lavender, poppy, grass tuft; bottom-anchored cells"
+ },
+ "skyline": {
+  "path": "assets/textures/skyline.webp",
+  "w": 2560,
+  "h": 771
+ },
+ "portrait-leaflet": {
+  "path": "assets/ui/portrait-leaflet.webp"
+ },
+ "portrait-bloomble": {
+  "path": "assets/ui/portrait-bloomble.webp"
+ },
+ "portrait-bubble": {
+  "path": "assets/ui/portrait-bubble.webp"
+ },
+ "portrait-flower-grazer": {
+  "path": "assets/ui/portrait-flower-grazer.webp"
+ },
+ "portrait-meadow-finch": {
+  "path": "assets/ui/portrait-meadow-finch.webp"
+ }
+}

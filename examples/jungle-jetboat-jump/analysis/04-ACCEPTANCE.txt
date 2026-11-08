@@ -1,0 +1,33 @@
+GAME-SPECIFIC CHECKS
+
+[ ] Drive across a checkpoint backward, twice forward and out of order; only the valid first forward crossing increments progress.
+
+[ ] Collect the same token with several overlapping collision checks; exactly 100 points and one pickup sound are emitted.
+
+[ ] At boosted speed, collide with the narrowest rock; no tunneling or repeated per-frame penalties occur.
+
+[ ] Land the ramp jump successfully and miss it deliberately; each produces the correct score/recovery behavior and resets the wake appropriately.
+
+[ ] Reach the finish without one gate; the game cannot award a completed run.
+
+[ ] Compare normal and boosted motion at 30, 60 and 120 render fps; simulation speed and scoring remain equivalent.
+
+[ ] Inspect crew in chase, cockpit and results views: exactly two, stable outfits, correct seating, no duplicated bodies.
+
+[ ] Play the whole route twice and retry midair; timers, tokens, checkpoints, camera and audio return to a clean starting state.
+
+COMMON RELEASE CHECKS
+
+[ ] The reference analysis and matched-camera style review exist; style/color differences are listed honestly.
+[ ] The original image, full sheet and all media have been inspected, with generation errors excluded from the game rules.
+[ ] The browser app loads from a clean install and its production build works without the development server's special routes.
+[ ] One full play session reaches a real completion condition, then restart restores the correct initial state.
+[ ] Pause/blur, held-key clearing, audio unlock, mute, window resize and lost pointer lock are handled.
+[ ] Every HUD value follows real state, and simultaneous events cannot duplicate score, inventory or rewards.
+[ ] Runtime asset requests succeed locally. No API credential or reference-video archive appears in the production bundle.
+[ ] The lower-quality mode preserves colors, silhouettes and UI readability. Performance measurements name browser, device and resolution.
+[ ] Existing shared geometry/material resources are not disposed while still in use; repeated restart does not continuously add listeners, scenes or audio loops.
+[ ] Meaningful tests cover the game's rule boundaries and failure recovery. Visual review covers what unit tests cannot establish.
+[ ] Final delivery includes controls, npm scripts, asset manifest/provenance, screenshots, actual play recording and known limitations.
+
+Acceptance boxes start unchecked. This package prepares implementation; it does not claim that the game has been built or tested.

@@ -1,0 +1,13 @@
+{
+  "name": "reference-to-game",
+  "owner": {
+    "name": "gokayfem"
+  },
+  "plugins": [
+    {
+      "name": "reference-to-game",
+      "source": "./",
+      "description": "Build playable games from any kind of reference while preserving style, colors and identity. Includes intake, asset-generation bookkeeping, runtime helpers and evidence tools."
+    }
+  ]
+}

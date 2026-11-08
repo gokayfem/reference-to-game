@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "Petal Pals",
+  "engine": "threejs",
+  "brief": "Observe, feed, photograph and befriend three companions while recording meadow wildlife and habitats.",
+  "references": [
+    {
+      "id": "ref-001",
+      "kind": "image",
+      "priority": 1,
+      "role": "original gameplay",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "gameplay-original.png",
+      "path": "references/ref-001-gameplay-original.png",
+      "sha256": "a200d19b1beb80f6b16d3897e3361abc176f1dc91583b5f190a8fcd838f1833e",
+      "inspection": "visually-reviewed"
+    },
+    {
+      "id": "ref-002",
+      "kind": "image",
+      "priority": 2,
+      "role": "development sheet",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "asset-sheet.png",
+      "path": "references/ref-002-asset-sheet.png",
+      "sha256": "4e2fd854be7954441d63111829cc5529bfb20b58e035bec40d428e0ce0534774",
+      "inspection": "visually-reviewed"
+    }
+  ],
+  "generation": {
+    "enabled": false,
+    "budget_usd": 0
+  },
+  "notes": [
+    "Historical example created before this reusable skill was packaged. Generation disabled by default; no model requests run when opening or building."
+  ]
+}

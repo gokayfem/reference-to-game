@@ -1,0 +1,37 @@
+Jungle Jetboat Jump
+
+COLOR AND COMPOSITION
+Keep a broad turquoise river framed by warm red-orange sandstone. The orange hull is the primary subject; its blue stripes, cream protective trim and dark jet unit separate it from the water. Yellow life vests and golden sun pickups are small high-value accents. Green foliage and pink flowers frame the banks without hiding the navigable channel. Blue sky and cream clouds occupy a generous upper portion of the chase view. Preserve warm rocks against cool water, rather than increasing saturation uniformly.
+
+SHAPES AND MATERIALS
+Use stepped, blocky sandstone with readable horizontal strata; rounded low-poly foliage; broad leaves and graphic flowers. The boat is compact, chunky and deliberately designed, with a real open two-seat cockpit. Exactly two distinct crew members: blond driver on starboard/right when facing forward, dark-haired passenger on port/left, blue clothing and yellow life vests. Their bodies remain separate from the hull. Keep the orange paint clean with subtle roughness; water has turquoise depth, brighter crest foam and restrained transparent edges. Do not substitute photorealistic humans or generic cylinders in the finished game.
+
+CAMERA AND HUD
+Start with a low rear chase camera, approximately 7 m behind and 3 m above the hull, 58-degree vertical FOV, looking 8 m ahead; tune against the original image. Use damped position/look target, a modest speed-related pullback and low-amplitude landing response. The river ahead stays visible. A cockpit toggle is secondary; it must use the same boat and crew. Navy translucent HUD cards, cream score/timer text, cyan speed accents and a round sun-and-water emblem should feel like the original. Rebuild all labels as crisp UI. Display actual speed in km/h from meters/second.
+
+STYLE FAILURE TO AVOID
+An ocean speedboat simulator, muddy realistic river, empty canyon, miniature remote-control boat or neon cyberpunk HUD would all miss the reference. Keep the sunny family-adventure energy, decorative plants, visible boat shape and readable water motion. Reduce rock and foliage variety before changing this palette or silhouette.
+
+STYLE AND COLOR ARE THE HIGHEST PRIORITY
+
+The user explicitly values style and colors above feature breadth. If time or performance forces a tradeoff, reduce the number of environments, secondary mechanics or cosmetic variants while keeping the established visual identity. Do not trade the art direction for an extensive generic prototype. Temporary blockouts may be used internally, but they are not the final appearance.
+
+REFERENCE ORDER
+1. The original gameplay image establishes the main composition, color relationships, lighting and overall feel.
+2. The full development sheet establishes object silhouettes, character identity, materials, modules and UI family. Its tiny generated labels and inconsistent diagrams are not literal rules.
+3. Refined individual scene images explain additional views and mechanics.
+4. The final videos explain motion and pacing, subject to the documented generation errors.
+5. The storyboard grids, early 2x2 drafts and replaced images are historical context. They never override the approved visual direction.
+The new written gameplay specification resolves rule ambiguity. Where an image and a numeric rule disagree, preserve the image's aesthetic while implementing the explicitly stated rule. All tuning values and executable map layouts in this package are new design proposals, not measurements of an existing game.
+
+FIRST VISUAL MILESTONE
+Inspect the actual original image and full sheet with image tools. Read the nine scene images and watch or sample each showcase. Write a short reference analysis stating the dominant color areas, subject proportions, material hierarchy, camera height/framing and UI spacing. Use the supplied semantic palette samples as observed anchors, not automatic PBR albedos. Source images contain lighting, shadows and highlights, so judge the final rendered appearance.
+
+Build one small representative scene with the hero asset, a few environment modules, lighting, camera and final-looking HUD. Use fal for assets that need its capabilities. Capture the scene at a camera comparable to the original. Put reference and implementation side by side. Fix the largest visual differences before expanding the map or adding more asset families. This is an autonomous review checkpoint, not a request for the user to approve every step.
+
+CONTINUOUS STYLE CHECK
+For each new asset, render it inside that same scene, at gameplay scale, under the actual game lighting. Check silhouette, hue/value, material response, relative size, edge treatment and line/detail density. Reject designs that look attractive in isolation but belong to another game. Record changes in STYLE_REVIEW.txt. Before final delivery capture at 1920x1080 and 1280x720; confirm the scene is still recognizable from its broad color masses with the HUD hidden.
+
+Use a 0–5 self-review score for palette relationships, silhouettes/proportions, materials, lighting, camera composition and UI family. Aim for at least 4 in every category; attach visual evidence and unresolved differences. This is an editorial review rubric, not an objective quality guarantee. Pixel differences alone are not a sufficient test because camera geometry and animation vary.
+
+Keep readable UI typography as real text with consistent icon silhouettes and spacing. Recreate generated gibberish with the correct concise labels. Preserve bright daylight, expressive simplified shapes and the intended density of detail. Avoid heavy bloom, excessive depth of field, gritty realism, dark grading and unrelated floating landforms. Preserve small-scale color accents without turning every surface equally saturated.

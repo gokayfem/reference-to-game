@@ -1,0 +1,98 @@
+{
+  "status": "locked",
+  "anchors": [
+    {
+      "reference_id": "ref-001",
+      "notes": "Primary appearance authority"
+    },
+    {
+      "reference_id": "ref-002",
+      "notes": "Asset vocabulary and secondary views"
+    }
+  ],
+  "palette": [
+    {
+      "role": "cream",
+      "hex": "#ecdcc5",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1870,
+        1353
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "mint",
+      "hex": "#a7c3b7",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2003,
+        1353
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "coral",
+      "hex": "#e88a75",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2130,
+        1354
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "blue-glass",
+      "hex": "#96b7d0",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2261,
+        1353
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "red-candy",
+      "hex": "#e30b24",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        641,
+        424
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "orange-star",
+      "hex": "#ca7f20",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1411,
+        518
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    }
+  ],
+  "identity": [
+    "cream and mint panels",
+    "tactile rounded machines and wooden belts",
+    "distinct translucent candy colors",
+    "large friendly typography"
+  ],
+  "materials": [
+    "Procedural toy machines + generated room art/icons + translucent candy"
+  ],
+  "lighting": "Bright soft daylight as specified by this reference; not a toolkit default.",
+  "camera": "Fixed elevated board camera with orthographic-like readability.",
+  "ui": "large friendly typography",
+  "motion": "Action-driven runtime animation; see app source.",
+  "nonnegotiables": [
+    "cream and mint panels",
+    "tactile rounded machines and wooden belts",
+    "distinct translucent candy colors",
+    "large friendly typography"
+  ],
+  "avoid": [],
+  "deliberate_changes": [
+    "Candy spacing is rule-driven and differs from the illustration; transmission uses an adaptive quality fallback."
+  ]
+}

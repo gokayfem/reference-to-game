@@ -1,0 +1,124 @@
+PETAL PALS — THREE.JS IMPLEMENTATION STATUS
+Updated: 2026-11-08 (round 4: wider river, reference props, remaining painted cycles, audio audit)
+
+ROUND 4 (this update)
+- River widened to match the painting (app/src/data/world.json halfWidth 4 → 5.5; the package's data/world.json is untouched).
+  New unit test: both bridge ends land on dry walkable ground. Props that fell in the water were moved.
+- Reference props: picnic blanket + basket, burrow mound, standing water lilies, map signpost, berry clusters.
+- Painted Peach front trot, Bubble front/back hops → every companion direction now animates with painted frames.
+- Audio audit (app/review/audio-spectrograms.jpg): no clipping (peaks −2…−14 dBFS), no DC offset. Fixed: music had a
+  ~2 s fade/silence tail (now trimmed + equal-power crossfaded loop, seam step 0.002), ambience crossfaded loop, footstep /
+  bridge step / UI click trimmed to short transients, music bed +3 dB. Verified in Chrome: AudioContext running after the
+  first key press, all 17 buffers decoded, both loops running, measured output bed −36.5 dBFS RMS with effects 12–15 dB
+  above it, mute → −95 dBFS. (Measured signal, not listened to by a person.)
+- Re-validated: 21/21 unit tests, production build, input-driven session 28/28, 0 errors; 116 draw calls, 207k tris,
+  60 fps at 1080p/720p High and Low. Recording + phone copy refreshed.
+
+ROUND 3
+- Camera-framing foreground foliage generated from crops of the reference's corners (dark leaves bottom-left, poppies/daisies
+  bottom-right), swaying, hidden in photo mode.
+- Painted Leaflet waddle (3/4, reused for side) and Peach back trot; every party view now has painted motion except Peach's
+  pure front (she sits when idle) and Bubble's non-side views (rig hop).
+- Draw calls 237 → 106 at 1080p (merged bridge rails/posts, instanced stepping stones and contact shadows) — now under the
+  150 budget; 208k triangles; 60 fps High and Low at 1080p and 720p.
+- Re-validated: 20/20 unit tests, production build, input-driven session 28/28, 0 errors. Recording refreshed, plus a
+  phone-sized copy app/review/gameplay-session-input-driven-small.mp4 (11 MB).
+
+ROUND 2
+- Rigging/movement: painted walk cycles generated from the turnaround (explorer: back, back-3/4, side, front, front-3/4 +
+  front-3/4 idle; Peach side + 3/4 trot; Bubble painted hop with a shared baseline so the jump reads), head-anchored frames, 5-view explorer facing; spring-driven sprite deformation rig
+  (lean, lagging top sway, squash/jelly, breathing) with per-species gaits; angled collision sliding; camera look-ahead.
+- Contrast/mood: post grade (saturation, contrast, warm highlights, sun glow, foreground vignette), stronger slope light,
+  drifting cloud shadows, tree shadow pools, pollen motes, painted butterflies, deeper sky, repainted river, painted bridge wood.
+- Style density: 15k tiny flower specks, flower-field rows on mid slopes, doubled grass; flowers clear a corridor so the
+  explorer is never buried.
+- Gameplay: next-goal tracker (state-derived, arrow + distance, minimap star), observe progress ring, finches take flight
+  when you hurry past, grazers look up, companion idle behaviours (Peach sits facing you), bridge footsteps, Bubble splash,
+  E on a fully befriended+photographed pal gives a friendly pat instead of opening photo mode.
+- Re-validated: 20/20 unit tests, production build (7.3 MB), input-driven session 28/28 checks, 0 errors; new recording,
+  captures, comparisons and animation strips in app/review/ (anim-*.jpg).
+
+PHASE
+Complete and validated: reference-matched scene, full playable loop, progression, state-driven UI, audio,
+persistence, tests, production build, input-driven play/restart session, matched captures and recording.
+
+PREVIEW
+Dev:        http://127.0.0.1:5173/   (npm --prefix app run dev; port 5173 was free; running in this session)
+Production: http://127.0.0.1:4173/   (npm --prefix app run preview after npm --prefix app run build)
+Controls / scripts / architecture: app/README.md
+
+BUILD / TEST RESULTS
+- npm run build: tsc --noEmit clean, vite build OK. dist = 7.3 MB (JS 623 kB / 170 kB gzip). No API key, no
+  reference media and no videos in dist (grep-checked).
+- npm run test: 21/21 vitest tests pass (rules, fruit/offer bounds, befriend prerequisites, flute once, photo validity,
+  unique-species counting, habitats once in any order, completion once, save round-trip, corrupt/tampered save recovery,
+  storage-full thumbnail trimming, walkability, Bubble shallows, A* route start→camp→lookout→orchard→sunflowers→start).
+- Input-driven production session (production/validation/session.mjs): 28/28 checks pass, 0 console/page errors.
+  Evidence: app/review/session/session-checks.json, session-log.txt, 15 screenshots, and
+  app/review/gameplay-session-input-driven.mp4 (~127 s, 1280x720, real CDP keyboard/mouse input on the production build).
+  Session: title click → befriend Leaflet/Peach/Bubble (observe, triple-pressed offer = exactly 1 fruit each, befriend) →
+  zero-fruit offer rejected → photos (+3 repeats, unique count unchanged) → flute → journal → map waypoint click →
+  page reload (save persisted, still 3 companions) → Flower Grazer photo → walk south bridge → riverbank → camp → lookout →
+  north bridge → orchard (3 fruit picked with E, each once) → sunflowers → finch photo → completion card 5/5, 4/4, 3/3 →
+  keep exploring → walk home → Pause → New Day → confirm → initial state restored, 3 companions, scene object count unchanged (58→58).
+- Performance (Mac mini M4, 24 GB, Chrome 156 headless, ANGLE/Metal, DPR 1): 60 fps at 1920x1080 and 1280x720 on High and Low
+  while walking (with the grade pass and ~22.7k instanced flower/grass cards); one composed frame at 1080p:
+  116 draw calls (under the 150 budget), 207k triangles.
+  Quality: High DPR≤1.5 / Medium 1.2 / Low 0.9 + 45 % flower cards (low-quality-*.png keeps palette, silhouettes, UI).
+
+ACCEPTANCE (brief/04-ACCEPTANCE.txt)
+[x] Camp–bridge–orchard–lookout route walked and returned; companions followed across both bridges (≤ 3.6 m); deep water blocks.
+[x] Map/journal/interaction/reload repeated: exactly three physical companions every time (ids leaflet-01, peach-01, bubble-01).
+[x] One species photographed repeatedly → unique total +1 only; occluded (behind an orchard tree) and too-far (18 m) shots rejected in the running dev build (subjects placed with the dev debug hook); tiny/off-frame covered by tests.
+[x] Zero-fruit offer and triple-press during offer: never negative, one fruit per committed offer.
+[x] Habitats in different orders fire once (test + session).
+[x] Trust ≥ threshold without observe/feed → Befriend stays locked (test + UI lock state).
+[x] Day completed using only the 3 starting fruit (orchard fruit optional; no respawn needed).
+[x] Map marker (single arrow), camera target reticle, selected subject card and journal species all read live world state.
+[x] Faces, Leaflet's leaf cap, Peach's petal ears, Bubble's translucent tail readable at gameplay distance (session screenshots).
+[x] Recorded real walk, feed, shutter, journal and flute sequence (mp4) — interactive, not video playback.
+[x] Reference analysis (app/review/REFERENCE_ANALYSIS.txt) and matched-camera style review (app/review/STYLE_REVIEW.txt).
+[x] Original image, sheet, refined scenes and video contact sheets inspected; generated-video errors excluded from rules.
+[x] Production build runs from vite preview (static files, relative base) without dev-server routes.
+[x] Full session reached real completion; New Day restored initial state.
+[x] Pause on tab hide, held keys cleared on blur, audio unlocked from first gesture, mute + music/effects volume, resize handled;
+    no pointer lock is used (so lost-lock handling is N/A).
+[x] HUD values derive from state; offers/befriend/flute commit once per animation; pickups have stable IDs.
+[x] Runtime asset requests succeed locally (0 failed requests in session); no credentials or reference archive in bundle.
+[x] Low quality preserves colours/silhouettes/UI; performance measured with named device/browser/resolution.
+[x] Restart does not grow the scene (58→58 objects), shared geometry/materials are cached and not disposed while in use.
+[x] Tests cover rule boundaries and failure recovery; visual review covers the rest.
+[x] Controls, npm scripts, asset manifest/provenance, screenshots, recording and limitations delivered.
+
+VISUAL COMPARISONS (app/review/)
+checkpoint0-side-by-side.jpg (first render) → checkpoint1-side-by-side.jpg → final-1080p-side-by-side.jpg;
+captures/final-1080p.png, final-720p.png, hud-hidden-*.png, low-quality-*.png, title-1080p.png; gameplay-contact-sheet.jpg.
+Self-review: 4/5 in palette, silhouettes, materials, lighting, camera composition and UI family (details + unresolved
+differences in STYLE_REVIEW.txt).
+
+FAL ASSETS / COSTS (production/fal-ledger.json = per-job request IDs; production/ASSET_MANIFEST.json = runtime provenance)
+- fal-ai/nano-banana-pro/edit: 34 jobs × $0.15 = $5.10 (round 3: foreground foliage, Leaflet waddle, Peach back trot; round 4: Peach front trot, Bubble front/back hop, props sheet); (round 2 added 10: 4 explorer walk cycles, explorer front-3/4, Peach side + 3/4 trot, Bubble hop; Peach back trot and Leaflet waddle rejected) (reference-guided sprites, props, flowers, ground, skyline, icons, portraits;
+  Leaflet + Bubble regenerated once; two prop sheets blended the full scene → regenerated without it).
+- fal-ai/birefnet/v2: 27 alpha jobs ($0.000575/compute-s; logged estimate ≤ $0.12).
+- fal-ai/elevenlabs/sound-effects/v2: 16 jobs (round 2: bridge steps, splash), ~27 s total at $0.002/s ≈ $0.05 (ledger estimates of $0.04/job are upper bounds).
+- fal-ai/elevenlabs/music: 1 job, 90 s at $0.60/min ≈ $0.90.
+- Approximate total ≈ $6.3 by list prices. Actual billed amounts were not queried.
+- Ledger note: a concurrent-write bug lost early ledger entries; it was rebuilt from per-job logs (request IDs authoritative)
+  and the writer now merges. Leaflet/Bubble revision-2 downloads overwrote the rejected revision-1 files in raw/<asset>/r1.
+- No 3D-model or video generation: painted directional sprites were chosen for all characters to keep the reference brushwork
+  (documented in REFERENCE_ANALYSIS.txt); historical video payloads were not replayed.
+
+KNOWN LIMITATIONS
+- Characters are painted billboards (no skeletal bones): explorer 5 views × 4-frame walk; Peach front/3-4/side/back trot;
+  Leaflet 3/4 waddle; Bubble front/side/back hop; wildlife uses the deformation rig. Steep photo-mode angles show the card nature. No skeletal bones; photo mode
+  from steep angles still shows the card nature.
+- River now 5.5 m half-width but sits further back in frame than in the painting; skyline panorama is mirror-repeated.
+- Flower Grazer/finch are photograph/observe-only (no feeding/befriending — intended).
+- Audio has been measured (spectrograms, levels, live output RMS) but not listened to by a person; the headless recording has no audio track.
+- Village is scenic (behind a fence), as allowed by the brief.
+
+NEXT CONCRETE STEP (optional polish)
+A human listening pass on the audio mix; optional closer camera variant to bring the river forward in frame.
+
+BLOCKERS
+None.

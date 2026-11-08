@@ -1,0 +1,51 @@
+SUNSHINE TRAIN BATTLE — THREE.JS IMPLEMENTATION STATUS
+Updated: 2026-11-08 (milestone 6: sculpted hands + robots, metallic lacquered train; playable, validated, local only — not published/deployed)
+
+PHASE: Complete playable scope + acceptance exercised. Remaining items are polish (see LIMITATIONS).
+PREVIEW (dev):  http://127.0.0.1:5174/   (npm --prefix app run dev; 5174 was free)
+PREVIEW (prod): http://127.0.0.1:5175/   (npm --prefix app run build && npm --prefix app run preview)
+
+WORKING
+- Six-car train from data/world.json + locomotive/engine checkpoint; gates unlock per cleared car; 1.2 m jump gap with
+  visible coupling + landing marker; side walkways on cover/jump cars; decorative parallel support train (right side).
+- Fixed 1/60 s sim with bounded accumulator; box-capsule controller (coyote 0.1 s, jump buffer, brief sprint, airborne
+  step-up disabled so gaps must be jumped); swept 45 m/s bolts (nearest hit, muzzle obstruction); base/shield/jumper
+  robot FSMs (telegraph → fire → recover; shield 120° arc + slow turn so flanking works; jumper wind-up/hop/land);
+  player barrier (15/s + 10/block, no firing); stable-ID loot (blue 30 / orange 60 / cells); checkpoint snapshots on
+  car clear; fall recovery (-50); death → retry restores snapshot (no loot farming); win + results + best score save.
+- First-person: fal-generated blaster GLB (clearcoat) + four fal-generated sculpted glove/forearm meshes (right grip,
+  left support, left open barrier, left holding a cell), auto-aligned from the cuff ring (src/data/handAlign.ts) and
+  swapped per action: support grip on the blaster's left flank, trigger flex per shot, reload (thumb release → cell
+  ejects → hand to belt → returns with a fresh cell → inserts → presses home), open-palm barrier, sprint carry, land
+  dip, hurt jolt. Exactly two hands. The jointed procedural rig remains as a load-failure fallback.
+- Metallic train: lacquered metallic paint (metalness 0.72 + clearcoat, wear roughness map), chrome bolts/steel, glossy
+  orange rails; reflections from a PMREM built from sky + hill panorama + sun; front glint light for bevel highlights.
+- HUD (DOM, state-bound): objective, hex badge, mag/reserve + reload bar, compass with engine marker, score/crystals,
+  reticle (red on robots), cyan shield badge + orange 10-segment health + energy bar, popups, prompts, route map (M).
+  Title/pause/settings (volume, music, effects, shake, sensitivity, quality)/death/results screens.
+- Audio: 12 fal SFX + 75 s fal instrumental loop, buses for music/effects, unlock on Play, mute, suspend on hide.
+
+TESTS: npm --prefix app run test → 20/20 pass.  Type-check + vite build pass (dist 14 MB, no credentials).
+- Robots: fal-generated base/shield/jumper meshes (sheet enemy family), animated by a vertex-shader rig from AI state
+  (stride, jumper squash/hop, telegraph arm raise + charge tint, hit flash); hitboxes re-measured from the meshes.
+PLAY-THROUGH (real keyboard/mouse via Playwright + pointer lock, final build with sculpted hands and robots): WON in
+  123.4 s game time, 11 crystals, 27/57 hits, 3 recoveries (deaths/falls exercised), gap jumped; NEXT RUN → state fully reset (cleared=[T,F,F,F,F,F],
+  mag 12/60, energy 100, score 0, 10 robots). Recording: app/review/final/real-input-playthrough.mp4 (1280x720).
+PERF (MacBook, Chrome, headed, production build): 120 fps (display cap) at 1920x1080 and 1280x720, High and Low.
+  ~30 draw calls / ~45k triangles in the opening view.
+
+STYLE: STYLE_REVIEW.txt, app/review/style-iterations/01–08 (06 hands, 07 robots, 08 metallic paint),
+  app/review/final/final-vs-original.png (original | ours; HUD-hidden | robot view), captures at 1920x1080 + 1280x720.
+ACCEPTANCE: app/review/ACCEPTANCE.md.
+FAL: 35 completed jobs + 1 failed, est. ~$6.17 — production/ASSET_LOG.md, production/fal-ledger.json.
+
+LIMITATIONS
+- Track is straight (the original image curves); train-local frame kept for reliable collision.
+- Blaster is viewed more from its flank than the original's behind-and-above angle.
+- Hands are posed meshes (no per-finger animation); pose changes are hidden by motion or a short squash.
+- Fixed during the hand pass: blaster sockets (incl. muzzle) were measured in rig space and offset; now gun-local.
+- Robot meshes are single pieces animated by vertex shear (no skeleton); defeat debris is simple toy parts.
+- Playwright bot reads state through a dev-only hook to choose targets; all actions it takes are real input events.
+- Recording was captured headless at 1280x720 (screencast frame rate is lower than the in-game 60 Hz sim).
+
+BLOCKERS: none.

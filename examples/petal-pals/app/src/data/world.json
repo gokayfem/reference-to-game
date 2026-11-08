@@ -1,0 +1,353 @@
+{
+  "status": "new authored implementation layout inspired by references; not an extracted 3D map",
+  "units": "meters",
+  "upAxis": "Y",
+  "forwardAxis": "+Z",
+  "boundsXZ": [
+    -60,
+    -60,
+    60,
+    60
+  ],
+  "river": {
+    "centerlineXZ": [
+      [
+        -18,
+        -60
+      ],
+      [
+        -10,
+        -30
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        9,
+        30
+      ],
+      [
+        18,
+        60
+      ]
+    ],
+    "halfWidth": 5.5,
+    "deepWaterBlocksExplorer": true,
+    "note": "halfWidth widened from the package proposal (4) to 5.5 so the river reads as wide as in the reference painting; bridges still span bank to bank"
+  },
+  "landmarks": [
+    {
+      "id": "start",
+      "positionXZ": [
+        -26,
+        24
+      ],
+      "role": "start"
+    },
+    {
+      "id": "camp",
+      "positionXZ": [
+        22,
+        10
+      ],
+      "role": "journal"
+    },
+    {
+      "id": "sunflowers",
+      "positionXZ": [
+        -30,
+        4
+      ],
+      "role": "habitat"
+    },
+    {
+      "id": "orchard",
+      "positionXZ": [
+        -28,
+        -30
+      ],
+      "role": "habitat/fruit"
+    },
+    {
+      "id": "riverbank",
+      "positionXZ": [
+        14,
+        24
+      ],
+      "role": "habitat"
+    },
+    {
+      "id": "lookout",
+      "positionXZ": [
+        36,
+        -32
+      ],
+      "role": "habitat"
+    },
+    {
+      "id": "village",
+      "positionXZ": [
+        40,
+        -48
+      ],
+      "role": "scenery"
+    }
+  ],
+  "bridges": [
+    {
+      "id": "bridge-south",
+      "endpointsXZ": [
+        [
+          -1,
+          20
+        ],
+        [
+          14,
+          20
+        ]
+      ],
+      "width": 3
+    },
+    {
+      "id": "bridge-north",
+      "endpointsXZ": [
+        [
+          -14,
+          -20
+        ],
+        [
+          2,
+          -20
+        ]
+      ],
+      "width": 3
+    }
+  ],
+  "paths": [
+    [
+      "start",
+      "sunflowers"
+    ],
+    [
+      "sunflowers",
+      "orchard"
+    ],
+    [
+      "start",
+      "bridge-south-west"
+    ],
+    [
+      "bridge-south-west",
+      "bridge-south-east"
+    ],
+    [
+      "bridge-south-east",
+      "riverbank"
+    ],
+    [
+      "riverbank",
+      "camp"
+    ],
+    [
+      "camp",
+      "bridge-north-east"
+    ],
+    [
+      "bridge-north-east",
+      "bridge-north-west"
+    ],
+    [
+      "bridge-north-west",
+      "orchard"
+    ],
+    [
+      "camp",
+      "lookout"
+    ]
+  ],
+  "pathNodesXZ": {
+    "bridge-south-west": [
+      -1,
+      20
+    ],
+    "bridge-south-east": [
+      14,
+      20
+    ],
+    "bridge-north-west": [
+      -14,
+      -20
+    ],
+    "bridge-north-east": [
+      2,
+      -20
+    ]
+  },
+  "party": [
+    {
+      "id": "leaflet-01",
+      "speciesId": "leaflet",
+      "heightMeters": 0.45
+    },
+    {
+      "id": "peach-01",
+      "speciesId": "bloomble",
+      "heightMeters": 0.55
+    },
+    {
+      "id": "bubble-01",
+      "speciesId": "bubble",
+      "heightMeters": 0.35
+    }
+  ],
+  "species": [
+    "leaflet",
+    "bloomble",
+    "bubble",
+    "flower-grazer",
+    "meadow-finch"
+  ],
+  "habitats": [
+    "sunflowers",
+    "riverbank",
+    "orchard",
+    "lookout"
+  ],
+  "wildlife": [
+    {
+      "id": "grazer-01",
+      "speciesId": "flower-grazer",
+      "positionXZ": [
+        -20,
+        5
+      ]
+    },
+    {
+      "id": "grazer-02",
+      "speciesId": "flower-grazer",
+      "positionXZ": [
+        25,
+        -20
+      ]
+    },
+    {
+      "id": "finch-01",
+      "speciesId": "meadow-finch",
+      "positionXZ": [
+        -32,
+        10
+      ]
+    },
+    {
+      "id": "finch-02",
+      "speciesId": "meadow-finch",
+      "positionXZ": [
+        -34,
+        -26
+      ]
+    }
+  ],
+  "fruit": [
+    {
+      "id": "fruit-01",
+      "positionXZ": [
+        -32,
+        -34
+      ]
+    },
+    {
+      "id": "fruit-02",
+      "positionXZ": [
+        -29,
+        -34
+      ]
+    },
+    {
+      "id": "fruit-03",
+      "positionXZ": [
+        -26,
+        -34
+      ]
+    },
+    {
+      "id": "fruit-04",
+      "positionXZ": [
+        -23,
+        -34
+      ]
+    },
+    {
+      "id": "fruit-05",
+      "positionXZ": [
+        -32,
+        -31
+      ]
+    },
+    {
+      "id": "fruit-06",
+      "positionXZ": [
+        -29,
+        -31
+      ]
+    },
+    {
+      "id": "fruit-07",
+      "positionXZ": [
+        -26,
+        -31
+      ]
+    },
+    {
+      "id": "fruit-08",
+      "positionXZ": [
+        -23,
+        -31
+      ]
+    },
+    {
+      "id": "fruit-09",
+      "positionXZ": [
+        -32,
+        -28
+      ]
+    },
+    {
+      "id": "fruit-10",
+      "positionXZ": [
+        -29,
+        -28
+      ]
+    },
+    {
+      "id": "fruit-11",
+      "positionXZ": [
+        -26,
+        -28
+      ]
+    },
+    {
+      "id": "fruit-12",
+      "positionXZ": [
+        -23,
+        -28
+      ]
+    }
+  ],
+  "tuning": {
+    "initialFruit": 3,
+    "trustInitial": 20,
+    "observeFirstReward": 10,
+    "fruitReward": 30,
+    "fluteFirstReward": 10,
+    "befriendThreshold": 60,
+    "observeRange": 3,
+    "offerRange": 2.5,
+    "photoMaxRange": 12
+  },
+  "completion": {
+    "species": 5,
+    "habitats": 4,
+    "friendships": 3
+  }
+}

@@ -1,0 +1,37 @@
+GAME-SPECIFIC CHECKS
+
+[ ] Run every supplied solved layout to completion and record delivered counts and elapsed simulated time.
+
+[ ] Run each initial broken layout; its intended defect prevents completion and produces a local understandable jam.
+
+[ ] Supply only red to a mixer, then add yellow; no orange is produced early and exactly one output consumes one of each.
+
+[ ] Send warm blue directly to the cube press; it is blocked until cooled through the correct machine.
+
+[ ] Feed a junction from two sources simultaneously; no overlap, duplication, disappearance or starvation occurs.
+
+[ ] Fill one split destination; the other receives candy and completion remains reachable.
+
+[ ] STOP & EDIT and RUN repeatedly; layout survives, in-flight candy/counters reset, and no previous delivery is counted again.
+
+[ ] Undo/redo placements and rotations; graph, preview, orientation and move count remain consistent.
+
+[ ] Try invalid placement on a fixed machine or outside the board; no moves are spent and no state is corrupted.
+
+[ ] Compare the reference and game at normal play scale: cream/mint framing, translucent candy, timber belts, readable teal UI and soft daylight all remain visible.
+
+COMMON RELEASE CHECKS
+
+[ ] The reference analysis and matched-camera style review exist; style/color differences are listed honestly.
+[ ] The original image, full sheet and all media have been inspected, with generation errors excluded from the game rules.
+[ ] The browser app loads from a clean install and its production build works without the development server's special routes.
+[ ] One full play session reaches a real completion condition, then restart restores the correct initial state.
+[ ] Pause/blur, held-key clearing, audio unlock, mute, window resize and lost pointer lock are handled.
+[ ] Every HUD value follows real state, and simultaneous events cannot duplicate score, inventory or rewards.
+[ ] Runtime asset requests succeed locally. No API credential or reference-video archive appears in the production bundle.
+[ ] The lower-quality mode preserves colors, silhouettes and UI readability. Performance measurements name browser, device and resolution.
+[ ] Existing shared geometry/material resources are not disposed while still in use; repeated restart does not continuously add listeners, scenes or audio loops.
+[ ] Meaningful tests cover the game's rule boundaries and failure recovery. Visual review covers what unit tests cannot establish.
+[ ] Final delivery includes controls, npm scripts, asset manifest/provenance, screenshots, actual play recording and known limitations.
+
+Acceptance boxes start unchecked. This package prepares implementation; it does not claim that the game has been built or tested.

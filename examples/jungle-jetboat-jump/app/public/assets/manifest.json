@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "coordinateSystem": "right-handed, Y-up, metres; forward = +Z; right = forward x up = -X when facing +Z",
+  "models": {
+    "models/hero-boat.glb": {
+      "source": "fal tripo3d/h3.1/image-to-3d (request 01a1bc71-ee6a-74b0-8a3f-eb0021277fca) from fal-ai/nano-banana-pro/edit isolation (01a1bc70-bfd4-7ec3-8e62-b4d7bb1731b5) of the original gameplay image + vehicle sheet",
+      "processing": "production/blender_normalize.py: rotate +90deg Z (bow -> +Z), scale to 3.8 m length, waterline origin (hull bottom -0.42 m), textures resized to 2048/1024 WEBP",
+      "size": [
+        2.04,
+        1.2,
+        3.8
+      ],
+      "pivot": "waterline, hull centre",
+      "triangles": 36345,
+      "sockets": {
+        "driverSeat": [
+          -0.42,
+          -0.08,
+          -0.22
+        ],
+        "passengerSeat": [
+          0.42,
+          -0.08,
+          -0.22
+        ],
+        "wheel": [
+          -0.42,
+          0.42,
+          0.28
+        ]
+      },
+      "collider": "circle radius 1.05 m (TUNING.hullRadius) in the XZ plane"
+    },
+    "models/driver.glb": {
+      "source": "fal tripo3d/h3.1 (01a1bc71-af50-70e2-b531-782115a3d497) from nano-banana-pro isolation (01a1bc70-c1b8-7051-a074-5715bd22d7ae)",
+      "processing": "rotate -90deg Z (face -> +Z), seated height 1.18 m, origin at boot soles, decimate 0.55, head split (top 30%) as node 'driver_head' re-pivoted at neck at runtime",
+      "identity": "blond driver, starboard/right seat"
+    },
+    "models/passenger.glb": {
+      "source": "fal tripo3d/h3.1 (01a1bc71-b160-7c30-bef5-4cbd398f99b2) from nano-banana-pro isolation (01a1bc70-c134-7db3-a5f8-09b6e020ecbc)",
+      "processing": "same as driver; node 'passenger_head'",
+      "identity": "dark-haired passenger, port/left seat"
+    }
+  },
+  "audio": {
+    "audio/engine-loop.mp3": "elevenlabs/sound-effects/v3 loop=true 8 s; pitch follows throttle+speed",
+    "audio/river-loop.mp3": "elevenlabs/sound-effects/v3 loop=true 10 s; constant low bed",
+    "audio/landing-splash.mp3": "one-shot on real water landing",
+    "audio/pickup-chime.mp3": "one-shot per collected token (rate-limited 50 ms)",
+    "audio/gate-chime.mp3": "one-shot per valid gate / finish",
+    "audio/rock-scrape.mp3": "one-shot on contact (rate-limited 250 ms)",
+    "audio/boost-whoosh.mp3": "boost start and ramp launch",
+    "audio/course-music.mp3": "fal-ai/elevenlabs/music 75 s instrumental, looped on the music bus"
+  },
+  "procedural": {
+    "sandstone cliffs": "upper/background tiers only: instanced chamfered blocks + world-space strata shader (src/world/canyon.ts); river-facing tiers use the fal module",
+    "foliage/flowers/trees/vines": "boulders procedural; bank plants, flowers, vines and trees are fal painted cards",
+    "water/foam/wake/spray": "river shader: 4 directional Gerstner-style waves (analytic normals, downstream travel), fbm micro-ripples, Schlick sky reflection, sun sheen + glints, Voronoi lace bank foam, fbm whitecaps, streaky rapid/cascade whitewater, foam rings at rocks, speed-scaled hull collar; wake ribbon with lacy arms + cellular bubbles; pooled foam-clump/droplet spray",
+    "HUD": "HTML/CSS/SVG text and emblem (index.html, src/ui)"
+  },
+  "textures": {
+    "textures/plants.webp": {
+      "layout": "4096x3072, 4x3 cells: broadleaf fern flowerbush vine / reeds palmlet bougainvillea elephantear / hibiscus fernflower agave vinecurtain",
+      "source": "3 Nano Banana Pro sheets -> BiRefNet v2 alpha -> packed by production script (layout json production/fal/outputs/atlas-layout.json)"
+    },
+    "textures/trees.webp": {
+      "layout": "3072x2048, 3x2 cells: acacia roundtree palm / jungletree gnarled",
+      "source": "2 Nano Banana Pro sheets -> BiRefNet alpha"
+    }
+  },
+  "cliffKit": {
+    "pieces": {
+      "module": "sandstone-module.glb (01a1bcae-...)",
+      "tall": "sandstone-tall.glb",
+      "wide": "sandstone-wide.glb",
+      "overhang": "sandstone-overhang.glb (cave)",
+      "rounded": "sandstone-rounded.glb (mesa)"
+    },
+    "lod": "each has *-lod.glb (350 tris, geometry only, reuses the full piece material); full pieces ~1500 tris",
+    "convention": "unit 1x1x1 m, base y=0, eroded FRONT faces local +X; native [depth, height, along] proportions recorded in src/main.ts CLIFFS for shape-aware random choice",
+    "processing": "production/blender_kit.py unit <tris>; Tripo H3.1 detailed geometry from Nano Banana Pro concepts guided by original cliff crops",
+    "runtime": "instanced per piece per 120 m chunk; near/far LOD swap at 170 m (high) / 110 m (low); random mirroring; distant mesas always full detail"
+  },
+  "rockKit": {
+    "pieces": [
+      "boulder-a.glb (single mossy)",
+      "boulder-b.glb (three-rock cluster)",
+      "boulder-c.glb (flat slab)"
+    ],
+    "convention": "uniform scale, largest footprint 1 m, base y=0; normals auto-checked outward at load",
+    "runtime": "albedo lifted/warmed in engine (Tripo baked dark slate blue); slalom rocks scaled to collision radius; shore, funnel, cascade and rapid-edge rocks randomly mixed"
+  },
+  "randomness": "Scenery seed random each page load (?seed=N to reproduce). Seed drives cliff piece choice/mirroring/sizes, bank biomes (lush, flowering, reedy, dry), plant/tree/rock mix, tints and mirroring. Gates, tokens, slalom rocks, ramp and colliders are fixed for fair play."
+}

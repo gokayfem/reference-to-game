@@ -1,0 +1,98 @@
+{
+  "status": "locked",
+  "anchors": [
+    {
+      "reference_id": "ref-001",
+      "notes": "Primary appearance authority"
+    },
+    {
+      "reference_id": "ref-002",
+      "notes": "Asset vocabulary and secondary views"
+    }
+  ],
+  "palette": [
+    {
+      "role": "train-blue",
+      "hex": "#3a7ab5",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2145,
+        795
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "safety-orange",
+      "hex": "#eb6e1b",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2256,
+        795
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "robot-purple",
+      "hex": "#7c43a3",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2363,
+        795
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "warm-white",
+      "hex": "#f0e7e1",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2473,
+        795
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "meadow-green",
+      "hex": "#7a9e45",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        2580,
+        795
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    },
+    {
+      "role": "sky-blue",
+      "hex": "#6fbce8",
+      "reference_id": "ref-002",
+      "sample_center_pixels": [
+        1641,
+        122
+      ],
+      "note": "Observed median reference pixels include illumination; not physical albedos."
+    }
+  ],
+  "identity": [
+    "blue train with orange rails",
+    "purple robots and turquoise eyes",
+    "white/orange blaster and blue gloves",
+    "sunny flower countryside"
+  ],
+  "materials": [
+    "Generated cleaned meshes + train-local simulation + moving scenery"
+  ],
+  "lighting": "Bright soft daylight as specified by this reference; not a toolkit default.",
+  "camera": "First-person roof-level camera with visible blaster and two hands.",
+  "ui": "sunny flower countryside",
+  "motion": "Action-driven runtime animation; see app source.",
+  "nonnegotiables": [
+    "blue train with orange rails",
+    "purple robots and turquoise eyes",
+    "white/orange blaster and blue gloves",
+    "sunny flower countryside"
+  ],
+  "avoid": [],
+  "deliberate_changes": [
+    "The track is straight instead of curved; hand poses and robot deformation are simpler than a skeletal animation system."
+  ]
+}

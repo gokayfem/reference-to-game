@@ -1,0 +1,37 @@
+Jellyworks
+
+COLOR AND COMPOSITION
+Cream and ivory occupy most of the frame, with mint chassis and room accents. Coral, yellow and blue controls identify functions. Candy provides the strongest saturated color: ruby red, lemon yellow, orange stars and blue cubes. Keep warm pale floors and subtle contact shadows so transparent products remain readable. The board is a tangible tabletop with a thick rounded rim, not a flat diagram on a dark screen.
+
+SHAPES AND MATERIALS
+Preserve rounded cream enamel machine housings, mint bases, small metal screws, warm timber belts and short silver rails. Candy is softly rounded, glossy and slightly translucent, with a clear silhouette; it must not look like opaque plastic blocks. Mixers have clear chambers and distinct interior paddles, presses have rigid moving parts, and cooling has pale frost cues. Use generous bevels without swelling every part into a balloon. Mechanical movement remains rigid.
+
+CAMERA AND HUD
+Use an orthographic three-quarter tabletop view as the normal camera. A starting offset like (11,15,13) looking at the board center is a tuning seed, not a fixed answer. Fit the entire playable board with safe margins and keep pipes/window background softer and less contrasty. Cream beveled UI cards, mint/coral buttons, dark teal rounded readable typography and simple embossed icons. The lower toolbar occupies a consistent band; goals live in one corner; title and moves occupy the top. The screen should resemble the original tactile puzzle, including the warm room behind it.
+
+STYLE FAILURE TO AVOID
+No neon factory, realistic dirty industrial machinery, flat unlit grid, generic mobile match-three gems or text baked into generated machine textures. Keep the original's pastel material contrast and carefully spaced machinery. Make every conveyor port readable at game scale. Stylized translucency is more important than physically expensive refraction that hides candy or damages frame rate.
+
+STYLE AND COLOR ARE THE HIGHEST PRIORITY
+
+The user explicitly values style and colors above feature breadth. If time or performance forces a tradeoff, reduce the number of environments, secondary mechanics or cosmetic variants while keeping the established visual identity. Do not trade the art direction for an extensive generic prototype. Temporary blockouts may be used internally, but they are not the final appearance.
+
+REFERENCE ORDER
+1. The original gameplay image establishes the main composition, color relationships, lighting and overall feel.
+2. The full development sheet establishes object silhouettes, character identity, materials, modules and UI family. Its tiny generated labels and inconsistent diagrams are not literal rules.
+3. Refined individual scene images explain additional views and mechanics.
+4. The final videos explain motion and pacing, subject to the documented generation errors.
+5. The storyboard grids, early 2x2 drafts and replaced images are historical context. They never override the approved visual direction.
+The new written gameplay specification resolves rule ambiguity. Where an image and a numeric rule disagree, preserve the image's aesthetic while implementing the explicitly stated rule. All tuning values and executable map layouts in this package are new design proposals, not measurements of an existing game.
+
+FIRST VISUAL MILESTONE
+Inspect the actual original image and full sheet with image tools. Read the nine scene images and watch or sample each showcase. Write a short reference analysis stating the dominant color areas, subject proportions, material hierarchy, camera height/framing and UI spacing. Use the supplied semantic palette samples as observed anchors, not automatic PBR albedos. Source images contain lighting, shadows and highlights, so judge the final rendered appearance.
+
+Build one small representative scene with the hero asset, a few environment modules, lighting, camera and final-looking HUD. Use fal for assets that need its capabilities. Capture the scene at a camera comparable to the original. Put reference and implementation side by side. Fix the largest visual differences before expanding the map or adding more asset families. This is an autonomous review checkpoint, not a request for the user to approve every step.
+
+CONTINUOUS STYLE CHECK
+For each new asset, render it inside that same scene, at gameplay scale, under the actual game lighting. Check silhouette, hue/value, material response, relative size, edge treatment and line/detail density. Reject designs that look attractive in isolation but belong to another game. Record changes in STYLE_REVIEW.txt. Before final delivery capture at 1920x1080 and 1280x720; confirm the scene is still recognizable from its broad color masses with the HUD hidden.
+
+Use a 0–5 self-review score for palette relationships, silhouettes/proportions, materials, lighting, camera composition and UI family. Aim for at least 4 in every category; attach visual evidence and unresolved differences. This is an editorial review rubric, not an objective quality guarantee. Pixel differences alone are not a sufficient test because camera geometry and animation vary.
+
+Keep readable UI typography as real text with consistent icon silhouettes and spacing. Recreate generated gibberish with the correct concise labels. Preserve bright daylight, expressive simplified shapes and the intended density of detail. Avoid heavy bloom, excessive depth of field, gritty realism, dark grading and unrelated floating landforms. Preserve small-scale color accents without turning every surface equally saturated.

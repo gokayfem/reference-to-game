@@ -1,0 +1,2141 @@
+{
+  "status": "proposed executable fixtures; not an existing game",
+  "coordinates": {
+    "column": "world +X",
+    "row": "world +Z",
+    "cellSizeMeters": 1.4,
+    "ports": "N=(0,-1), E=(1,0), S=(0,1), W=(-1,0)"
+  },
+  "levels": [
+    {
+      "id": "connect",
+      "name": "CONNECT",
+      "size": [
+        10,
+        5
+      ],
+      "moveBudget": 6,
+      "goals": {
+        "bin-blue": 6
+      },
+      "initialLayout": [
+        {
+          "id": "blue",
+          "kind": "source",
+          "cell": [
+            0,
+            2
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "blue"
+        },
+        {
+          "id": "cooler",
+          "kind": "cooler",
+          "cell": [
+            3,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "cube",
+          "kind": "cube_press",
+          "cell": [
+            6,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-blue",
+          "kind": "bin",
+          "cell": [
+            9,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "blue",
+            "shape": "cube"
+          }
+        },
+        {
+          "id": "belt-1-2",
+          "kind": "straight",
+          "cell": [
+            1,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-2",
+          "kind": "straight",
+          "cell": [
+            2,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-2",
+          "kind": "straight",
+          "cell": [
+            5,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-7-2",
+          "kind": "straight",
+          "cell": [
+            7,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-8-2",
+          "kind": "straight",
+          "cell": [
+            8,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "solvedLayout": [
+        {
+          "id": "blue",
+          "kind": "source",
+          "cell": [
+            0,
+            2
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "blue"
+        },
+        {
+          "id": "cooler",
+          "kind": "cooler",
+          "cell": [
+            3,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "cube",
+          "kind": "cube_press",
+          "cell": [
+            6,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-blue",
+          "kind": "bin",
+          "cell": [
+            9,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "blue",
+            "shape": "cube"
+          }
+        },
+        {
+          "id": "belt-1-2",
+          "kind": "straight",
+          "cell": [
+            1,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-2",
+          "kind": "straight",
+          "cell": [
+            2,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-2",
+          "kind": "straight",
+          "cell": [
+            4,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-2",
+          "kind": "straight",
+          "cell": [
+            5,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-7-2",
+          "kind": "straight",
+          "cell": [
+            7,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-8-2",
+          "kind": "straight",
+          "cell": [
+            8,
+            2
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "knownSolution": [
+        {
+          "action": "place",
+          "node": {
+            "id": "belt-4-2",
+            "kind": "straight",
+            "cell": [
+              4,
+              2
+            ],
+            "inputs": [
+              "W"
+            ],
+            "outputs": [
+              "E"
+            ],
+            "fixed": false
+          }
+        }
+      ],
+      "optimalityProven": false
+    },
+    {
+      "id": "combine",
+      "name": "COMBINE",
+      "size": [
+        12,
+        8
+      ],
+      "moveBudget": 10,
+      "goals": {
+        "bin-orange": 8
+      },
+      "initialLayout": [
+        {
+          "id": "red",
+          "kind": "source",
+          "cell": [
+            0,
+            1
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "red"
+        },
+        {
+          "id": "yellow",
+          "kind": "source",
+          "cell": [
+            0,
+            4
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "yellow"
+        },
+        {
+          "id": "mixer",
+          "kind": "mixer",
+          "cell": [
+            4,
+            3
+          ],
+          "inputs": [
+            "N",
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "inputColors": {
+            "N": "red",
+            "W": "yellow"
+          }
+        },
+        {
+          "id": "star",
+          "kind": "star_press",
+          "cell": [
+            7,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "belt-1-1",
+          "kind": "straight",
+          "cell": [
+            1,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-1",
+          "kind": "straight",
+          "cell": [
+            2,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-1",
+          "kind": "straight",
+          "cell": [
+            3,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-1",
+          "kind": "turn",
+          "cell": [
+            4,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-2",
+          "kind": "straight",
+          "cell": [
+            4,
+            2
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-4",
+          "kind": "straight",
+          "cell": [
+            1,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-4",
+          "kind": "straight",
+          "cell": [
+            2,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-4",
+          "kind": "turn",
+          "cell": [
+            3,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "N"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-3",
+          "kind": "turn",
+          "cell": [
+            3,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-6-3",
+          "kind": "straight",
+          "cell": [
+            6,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "bin-orange",
+          "kind": "bin",
+          "cell": [
+            10,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "belt-8-3",
+          "kind": "straight",
+          "cell": [
+            8,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-3",
+          "kind": "straight",
+          "cell": [
+            9,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "solvedLayout": [
+        {
+          "id": "red",
+          "kind": "source",
+          "cell": [
+            0,
+            1
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "red"
+        },
+        {
+          "id": "yellow",
+          "kind": "source",
+          "cell": [
+            0,
+            4
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "yellow"
+        },
+        {
+          "id": "mixer",
+          "kind": "mixer",
+          "cell": [
+            4,
+            3
+          ],
+          "inputs": [
+            "N",
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "inputColors": {
+            "N": "red",
+            "W": "yellow"
+          }
+        },
+        {
+          "id": "star",
+          "kind": "star_press",
+          "cell": [
+            7,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "belt-1-1",
+          "kind": "straight",
+          "cell": [
+            1,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-1",
+          "kind": "straight",
+          "cell": [
+            2,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-1",
+          "kind": "straight",
+          "cell": [
+            3,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-1",
+          "kind": "turn",
+          "cell": [
+            4,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-2",
+          "kind": "straight",
+          "cell": [
+            4,
+            2
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-4",
+          "kind": "straight",
+          "cell": [
+            1,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-4",
+          "kind": "straight",
+          "cell": [
+            2,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-4",
+          "kind": "turn",
+          "cell": [
+            3,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "N"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-3",
+          "kind": "turn",
+          "cell": [
+            3,
+            3
+          ],
+          "inputs": [
+            "S"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-3",
+          "kind": "straight",
+          "cell": [
+            5,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-6-3",
+          "kind": "straight",
+          "cell": [
+            6,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "bin-orange",
+          "kind": "bin",
+          "cell": [
+            10,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "belt-8-3",
+          "kind": "straight",
+          "cell": [
+            8,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-3",
+          "kind": "straight",
+          "cell": [
+            9,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "knownSolution": [
+        {
+          "action": "rotate_to_ports",
+          "id": "belt-3-3",
+          "inputs": [
+            "S"
+          ],
+          "outputs": [
+            "E"
+          ]
+        },
+        {
+          "action": "place",
+          "node": {
+            "id": "belt-5-3",
+            "kind": "straight",
+            "cell": [
+              5,
+              3
+            ],
+            "inputs": [
+              "W"
+            ],
+            "outputs": [
+              "E"
+            ],
+            "fixed": false
+          }
+        }
+      ],
+      "optimalityProven": false
+    },
+    {
+      "id": "optimize",
+      "name": "OPTIMIZE",
+      "size": [
+        14,
+        10
+      ],
+      "moveBudget": 18,
+      "goals": {
+        "bin-orange-a": 6,
+        "bin-orange-b": 6,
+        "bin-blue": 8
+      },
+      "initialLayout": [
+        {
+          "id": "red",
+          "kind": "source",
+          "cell": [
+            0,
+            1
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "red"
+        },
+        {
+          "id": "yellow",
+          "kind": "source",
+          "cell": [
+            0,
+            4
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "yellow"
+        },
+        {
+          "id": "mixer",
+          "kind": "mixer",
+          "cell": [
+            4,
+            3
+          ],
+          "inputs": [
+            "N",
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "inputColors": {
+            "N": "red",
+            "W": "yellow"
+          }
+        },
+        {
+          "id": "star",
+          "kind": "star_press",
+          "cell": [
+            7,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "belt-1-1",
+          "kind": "straight",
+          "cell": [
+            1,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-1",
+          "kind": "straight",
+          "cell": [
+            2,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-1",
+          "kind": "straight",
+          "cell": [
+            3,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-1",
+          "kind": "turn",
+          "cell": [
+            4,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-2",
+          "kind": "straight",
+          "cell": [
+            4,
+            2
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-4",
+          "kind": "straight",
+          "cell": [
+            1,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-4",
+          "kind": "straight",
+          "cell": [
+            2,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-4",
+          "kind": "turn",
+          "cell": [
+            3,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "N"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-3",
+          "kind": "turn",
+          "cell": [
+            3,
+            3
+          ],
+          "inputs": [
+            "S"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-6-3",
+          "kind": "straight",
+          "cell": [
+            6,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "split",
+          "kind": "split",
+          "cell": [
+            9,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E",
+            "S"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-orange-a",
+          "kind": "bin",
+          "cell": [
+            12,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "bin-orange-b",
+          "kind": "bin",
+          "cell": [
+            12,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "blue",
+          "kind": "source",
+          "cell": [
+            0,
+            8
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "blue"
+        },
+        {
+          "id": "cooler",
+          "kind": "cooler",
+          "cell": [
+            3,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "cube",
+          "kind": "cube_press",
+          "cell": [
+            6,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-blue",
+          "kind": "bin",
+          "cell": [
+            12,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "blue",
+            "shape": "cube"
+          }
+        },
+        {
+          "id": "belt-8-3",
+          "kind": "straight",
+          "cell": [
+            8,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-3",
+          "kind": "straight",
+          "cell": [
+            10,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-3",
+          "kind": "straight",
+          "cell": [
+            11,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-4",
+          "kind": "straight",
+          "cell": [
+            9,
+            4
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-5",
+          "kind": "turn",
+          "cell": [
+            9,
+            5
+          ],
+          "inputs": [
+            "E"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-5",
+          "kind": "straight",
+          "cell": [
+            10,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-5",
+          "kind": "straight",
+          "cell": [
+            11,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-8",
+          "kind": "straight",
+          "cell": [
+            1,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-8",
+          "kind": "straight",
+          "cell": [
+            2,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-8",
+          "kind": "straight",
+          "cell": [
+            4,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-8",
+          "kind": "straight",
+          "cell": [
+            5,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-7-8",
+          "kind": "straight",
+          "cell": [
+            7,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-8",
+          "kind": "straight",
+          "cell": [
+            9,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-8",
+          "kind": "straight",
+          "cell": [
+            10,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-8",
+          "kind": "straight",
+          "cell": [
+            11,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "solvedLayout": [
+        {
+          "id": "red",
+          "kind": "source",
+          "cell": [
+            0,
+            1
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "red"
+        },
+        {
+          "id": "yellow",
+          "kind": "source",
+          "cell": [
+            0,
+            4
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "yellow"
+        },
+        {
+          "id": "mixer",
+          "kind": "mixer",
+          "cell": [
+            4,
+            3
+          ],
+          "inputs": [
+            "N",
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "inputColors": {
+            "N": "red",
+            "W": "yellow"
+          }
+        },
+        {
+          "id": "star",
+          "kind": "star_press",
+          "cell": [
+            7,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "belt-1-1",
+          "kind": "straight",
+          "cell": [
+            1,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-1",
+          "kind": "straight",
+          "cell": [
+            2,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-1",
+          "kind": "straight",
+          "cell": [
+            3,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-1",
+          "kind": "turn",
+          "cell": [
+            4,
+            1
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-2",
+          "kind": "straight",
+          "cell": [
+            4,
+            2
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-4",
+          "kind": "straight",
+          "cell": [
+            1,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-4",
+          "kind": "straight",
+          "cell": [
+            2,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-4",
+          "kind": "turn",
+          "cell": [
+            3,
+            4
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "N"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-3-3",
+          "kind": "turn",
+          "cell": [
+            3,
+            3
+          ],
+          "inputs": [
+            "S"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-3",
+          "kind": "straight",
+          "cell": [
+            5,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-6-3",
+          "kind": "straight",
+          "cell": [
+            6,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "split",
+          "kind": "split",
+          "cell": [
+            9,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E",
+            "S"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-orange-a",
+          "kind": "bin",
+          "cell": [
+            12,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "bin-orange-b",
+          "kind": "bin",
+          "cell": [
+            12,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "orange",
+            "shape": "star"
+          }
+        },
+        {
+          "id": "blue",
+          "kind": "source",
+          "cell": [
+            0,
+            8
+          ],
+          "inputs": [],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true,
+          "color": "blue"
+        },
+        {
+          "id": "cooler",
+          "kind": "cooler",
+          "cell": [
+            3,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "cube",
+          "kind": "cube_press",
+          "cell": [
+            6,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": true
+        },
+        {
+          "id": "bin-blue",
+          "kind": "bin",
+          "cell": [
+            12,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [],
+          "fixed": true,
+          "accepts": {
+            "color": "blue",
+            "shape": "cube"
+          }
+        },
+        {
+          "id": "belt-8-3",
+          "kind": "straight",
+          "cell": [
+            8,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-3",
+          "kind": "straight",
+          "cell": [
+            10,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-3",
+          "kind": "straight",
+          "cell": [
+            11,
+            3
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-4",
+          "kind": "straight",
+          "cell": [
+            9,
+            4
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "S"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-5",
+          "kind": "turn",
+          "cell": [
+            9,
+            5
+          ],
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-5",
+          "kind": "straight",
+          "cell": [
+            10,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-5",
+          "kind": "straight",
+          "cell": [
+            11,
+            5
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-1-8",
+          "kind": "straight",
+          "cell": [
+            1,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-2-8",
+          "kind": "straight",
+          "cell": [
+            2,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-4-8",
+          "kind": "straight",
+          "cell": [
+            4,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-5-8",
+          "kind": "straight",
+          "cell": [
+            5,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-7-8",
+          "kind": "straight",
+          "cell": [
+            7,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-8-8",
+          "kind": "straight",
+          "cell": [
+            8,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-9-8",
+          "kind": "straight",
+          "cell": [
+            9,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-10-8",
+          "kind": "straight",
+          "cell": [
+            10,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        },
+        {
+          "id": "belt-11-8",
+          "kind": "straight",
+          "cell": [
+            11,
+            8
+          ],
+          "inputs": [
+            "W"
+          ],
+          "outputs": [
+            "E"
+          ],
+          "fixed": false
+        }
+      ],
+      "knownSolution": [
+        {
+          "action": "rotate_to_ports",
+          "id": "belt-9-5",
+          "inputs": [
+            "N"
+          ],
+          "outputs": [
+            "E"
+          ]
+        },
+        {
+          "action": "place",
+          "node": {
+            "id": "belt-5-3",
+            "kind": "straight",
+            "cell": [
+              5,
+              3
+            ],
+            "inputs": [
+              "W"
+            ],
+            "outputs": [
+              "E"
+            ],
+            "fixed": false
+          }
+        },
+        {
+          "action": "place",
+          "node": {
+            "id": "belt-8-8",
+            "kind": "straight",
+            "cell": [
+              8,
+              8
+            ],
+            "inputs": [
+              "W"
+            ],
+            "outputs": [
+              "E"
+            ],
+            "fixed": false
+          }
+        }
+      ],
+      "optimalityProven": false
+    }
+  ],
+  "recipes": [
+    {
+      "id": "mix-orange",
+      "inputs": [
+        "red:warm:unformed",
+        "yellow:warm:unformed"
+      ],
+      "output": "orange:warm:unformed",
+      "seconds": 1.2
+    },
+    {
+      "id": "star",
+      "input": "orange:warm:unformed",
+      "output": "orange:warm:star",
+      "seconds": 0.8
+    },
+    {
+      "id": "cool",
+      "input": "blue:warm:unformed",
+      "output": "blue:cooled:unformed",
+      "seconds": 1
+    },
+    {
+      "id": "cube",
+      "input": "blue:cooled:unformed",
+      "output": "blue:cooled:cube",
+      "seconds": 0.8
+    }
+  ]
+}

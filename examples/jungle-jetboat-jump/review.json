@@ -1,0 +1,36 @@
+{
+  "build_fingerprint": null,
+  "checks": {
+    "style": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    },
+    "playability": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    },
+    "state_and_restart": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    },
+    "build": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    },
+    "performance": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    },
+    "assets": {
+      "status": "pending",
+      "evidence": [],
+      "notes": ""
+    }
+  },
+  "limitations": []
+}

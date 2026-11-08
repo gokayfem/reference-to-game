@@ -1,0 +1,68 @@
+JELLYWORKS — THREE.JS IMPLEMENTATION STATUS
+Updated: 2026-11-08 (M5: recaptured finals, merged machine geometry, tiered adaptive quality)
+
+PHASE: Complete playable build delivered; acceptance checks exercised (see below).
+
+PREVIEW URLS
+- Dev server:        http://127.0.0.1:5172/   (npm run dev, in app/)
+- Production preview: http://127.0.0.1:5182/  (npm run preview; 5173 was occupied by another process,
+  so the preview port was moved to 5182)
+
+WHAT WORKS
+- Title screen with level cards (stars/best moves from save), audio unlock on the first click.
+- Three authored puzzles from data/world.json (copied to app/src/data/world.json): CONNECT, COMBINE,
+  OPTIMIZE. Initial (broken) layouts are what players see; solved layouts are dev fixtures only.
+- Build mode: BELT/TURN/SPLIT/MERGE placement, ERASE, R / Shift+R rotation, F mirror, hover ghost with
+  in/out port arrows, invalid-edit reasons (fixed machine, outside board, nothing to erase, no moves),
+  move budget, undo/redo, MIX/MOLD inspect fixed machines and explain recipes.
+- Run mode: deterministic 1/60 s simulation, one candy per transport cell, reservations, backpressure,
+  bounded machine buffers, splitter alternation, merge round-robin, mixer/star press/cooler/cube press
+  recipes, wrong-ingredient blocking with feedback, jam badges + tooltip, pause, STOP & EDIT,
+  per-ID single delivery, goal cards/progress bars from state, completion with stars, versioned save.
+- Jelly mechanics (visual layer driven by sim state): squash/stretch springs, inertial lean on turns,
+  stop squish, queued jiggle, pop on spawn/transform, hopper drop bounce, mixer funnel hop + swirl,
+  cooler interior, press squash under the ram, arcs into bins with landing squash, completion confetti,
+  goal-card bumps, post-jam repair hints (ROTATE TO CONNECT / PLACE A BELT TO CONNECT).
+- Visuals: procedural candy-factory kit + fal-generated room backdrop and HUD icons; machine animation
+  state-driven (paddle, ram, frost, star glow); quality selector (High: transmission gummies, 1.5 DPR cap;
+  Low: emissive gummies, 1.0 DPR, smaller shadow map).
+- Audio: fal-generated SFX and music, Web Audio, one pooled belt loop, mute + music/effects volume.
+
+TESTS
+- npm run test: 18/18 pass (solved layouts complete: CONNECT 15.95 s, COMBINE 23.35 s, OPTIMIZE 33.62 s
+  simulated; initial layouts jam locally; mixer waits for both; warm blue blocked at cube press; merge
+  fairness/no duplication; split fills one bin then the other; restarts never double count; undo/redo;
+  invalid edits free; budget enforced; corrupted save recovery).
+- npm run build: OK (dist 3.9 MB incl. fonts/assets; no FAL key, no media/ in bundle; loadSolved stripped).
+- scripts/playtest.mjs (real mouse/keyboard, no solved fixtures): 26/26 pass (adds repair-hint check) on dev AND on the production
+  preview build — includes full session through all 3 levels, completion, next-puzzle, restart,
+  progression persistence, pause, resize, no page errors. Results: app/review/playtest*/results.json.
+- Performance (scripts/perf.mjs, Chrome 156 headless w/ ANGLE Metal, Apple M4, 1920x1080, DPR 1).
+  Measured while other game sessions ran (load average ~12), so numbers are noisy.
+  Low: 60.1 fps. High (transmission + GTAO + quarter-res bloom) sags below 48 fps under this load;
+  the adaptive fallback then drops those three effects once and High measured 60.2 fps (~472 calls,
+  326k tris). Full High without fallback was not measured on an idle machine after M4.
+
+EVIDENCE
+- Gameplay recording (real input, re-recorded after M2): app/review/gameplay-recording.mp4
+- Final captures re-taken at 23:36-23:38 (earlier loop had silently left stale images).
+- Jelly close-up bursts: app/review/jelly/; machine close-ups: app/review/final/closeup-machines-*.png
+- Reference vs game: app/review/final/compare-reference-vs-game.png and -nohud.png
+- Captures: app/review/final/*1920x1080*.png, *1280x720*.png, *lowq.png; iteration shots app/review/m1-*.png
+- Style log and 0-5 scores: STYLE_REVIEW.txt (all categories >= 4)
+
+FAL ASSETS / JOBS: 21 calls, est. ≈ $2.57, all COMPLETED, none duplicated. See production/ASSET_LOG.md
+  and production/fal/ledger-*.jsonl. In game: room backdrop, 11 icons, 9 SFX, music. Two Tripo GLBs
+  generated, evaluated in-scene and rejected for runtime (kept in production/fal/rejected-runtime/).
+
+KNOWN LIMITATIONS
+- Candy lines are sparser than the reference (rule-driven spacing); bins lack the reference's roofed hood.
+- No floor hint paths; touch controls not implemented (desktop mouse/keyboard only).
+- Audio quality was checked technically (levels/duration/clipping) but not by ear.
+- Draw calls (~560 High) still exceed the 150 starting budget; machine housings are not merged because
+  their moving parts are separate meshes. Measured 60 fps on the test machine only.
+- Headless Chrome was the only browser measured.
+
+NEXT CONCRETE STEP (optional polish): merge static machine parts; roofed bin hoods; floor hint arrows.
+
+BLOCKERS: none.

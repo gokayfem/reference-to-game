@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "id": "asset-001",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/defeat.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-002",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/hit.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-003",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/hurt.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-004",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/land.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-005",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/music.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-006",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/pickup.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-007",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/reload.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-008",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/robotshot.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-009",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/shieldhit.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-010",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/shot.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-011",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/trainloop.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-012",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/unlock.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-013",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/victory.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-014",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/manifest.json",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-015",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/energy-blaster.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-016",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/hands/hand-left-cell.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-017",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/hands/hand-left-open.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-018",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/hands/hand-left-support.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-019",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/hands/hand-right-grip.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-020",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/robots/robot-base.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-021",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/robots/robot-jumper.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-022",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/models/robots/robot-shield.glb",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-023",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/backdrop.jpg",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-024",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/flower-atlas.png",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-025",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/meadow.jpg",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-026",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/roof-metal.jpg",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-027",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/tree-atlas.png",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    }
+  ]
+}

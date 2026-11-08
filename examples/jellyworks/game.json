@@ -1,0 +1,28 @@
+{
+  "status": "ready",
+  "premise": "Repair conveyor routes, combine ingredients, transform candy and satisfy three puzzles.",
+  "actions": [
+    "See app/README.md controls and app/src/game rules"
+  ],
+  "loop": {
+    "goal": "Repair conveyor routes, combine ingredients, transform candy and satisfy three puzzles.",
+    "success": "Complete the state-defined level or session goals.",
+    "failure_or_pressure": "See original gameplay brief for this game; preserve recovery and resource rules.",
+    "restart": "Reset session state through the in-game restart control."
+  },
+  "mechanics": [],
+  "invariants": [
+    "Unique entity/reward IDs and state-driven counters",
+    "Restart restores the initial session; no duplicate rewards",
+    "See app/tests for domain-specific rule boundaries"
+  ],
+  "levels": [
+    {
+      "source": "app/src/data or app/src/game",
+      "description": "Authored playable level data, not decorative maps."
+    }
+  ],
+  "assumptions": [
+    "Mechanics were authored to make the references coherent and playable."
+  ]
+}

@@ -1,0 +1,1444 @@
+{
+  "items": [
+    {
+      "id": "asset-001",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/ambience.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-002",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/befriend.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-003",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/bubble-chirp.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-004",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/discover.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-005",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/finch-chirp.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-006",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/flute.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-007",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/footstep.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-008",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/grazer-call.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-009",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/leaflet-chirp.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-010",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/munch.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-011",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/music.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-012",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/peach-chirp.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-013",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/pickup.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-014",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/shutter.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-015",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/splash.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-016",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/step-wood.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-017",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/audio/ui-click.mp3",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-018",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/arrow-sign.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-019",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/basket.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-020",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bench.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-021",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/berry-bush.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-022",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/berry-cluster.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-023",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/boulders.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-024",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-025",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-back.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-026",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-front.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-027",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-side.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-028",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-back-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-029",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-back-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-030",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-back-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-031",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-back-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-032",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-front-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-033",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-front-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-034",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-front-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-035",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-front-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-036",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-side-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-037",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-side-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-038",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-side-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-039",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bubble-walk-side-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-040",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/burrow.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-041",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/bush.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-042",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/cairn.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-043",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/cottage-blue.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-044",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/cottage-orange.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-045",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/crates.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-046",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/easel.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-047",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-back.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-048",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-back34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-049",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-camera.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-050",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-flute.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-051",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-front.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-052",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-front34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-053",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-offer.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-054",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-point.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-055",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-side.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-056",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-057",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-058",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-059",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-060",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back34-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-061",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back34-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-062",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back34-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-063",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-back34-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-064",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-065",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-066",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-067",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-068",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front34-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-069",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front34-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-070",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front34-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-071",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-front34-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-072",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-side-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-073",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-side-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-074",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-side-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-075",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/explorer-walk-side-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-076",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/fence.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-077",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/fg-left.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-078",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/fg-right.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-079",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/finch-peck.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-080",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/finch.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-081",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/flag.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-082",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/grazer-34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-083",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/grazer-graze.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-084",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-085",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-back.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-086",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-front.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-087",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-side.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-088",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-walk-34-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-089",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-walk-34-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-090",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-walk-34-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-091",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/leaflet-walk-34-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-092",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/lily-flower.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-093",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/lilypad.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-094",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/lookout-tower.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-095",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/map-sign.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-096",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/notice-board.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-097",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-34.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-098",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-back.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-099",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-front.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-100",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-side.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-101",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-34-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-102",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-34-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-103",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-34-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-104",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-34-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-105",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-back-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-106",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-back-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-107",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-back-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-108",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-back-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-109",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-front-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-110",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-front-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-111",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-front-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-112",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-front-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-113",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-side-0.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-114",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-side-1.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-115",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-side-2.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-116",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/peach-walk-side-3.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-117",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/picnic-blanket.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-118",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/picnic-table.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-119",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/sunflowers.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-120",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/tent.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-121",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/tree-apple.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-122",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/tree-poplar.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-123",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/tree-round.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-124",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/sprites/windmill.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-125",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/flower-atlas.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-126",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/ground.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-127",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/textures/skyline.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-128",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-binoculars.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-129",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-camera.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-130",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-check.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-131",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-flower.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-132",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-flute.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-133",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-heart.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-134",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-journal.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-135",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-magnifier.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-136",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-map.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-137",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-orange.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-138",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-pin.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-139",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/icon-sunflower.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-140",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/portrait-bloomble.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-141",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/portrait-bubble.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-142",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/portrait-flower-grazer.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-143",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/portrait-leaflet.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    },
+    {
+      "id": "asset-144",
+      "references": [
+        "ref-001",
+        "ref-002"
+      ],
+      "status": "accepted",
+      "runtime_path": "app/public/assets/ui/portrait-meadow-finch.webp",
+      "provenance": "Original case runtime asset; see public asset manifest where present. Provider-generated/procedural demo material; check terms before reuse."
+    }
+  ]
+}

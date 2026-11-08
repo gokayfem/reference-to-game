@@ -1,0 +1,40 @@
+Sunshine Train Battle
+
+COLOR AND COMPOSITION
+Cobalt-blue roofs and bright orange rails define the arena. The cream-white/orange blaster and blue gloves occupy the lower foreground. Round purple robots with cyan eyes contrast strongly against the train; blue/orange crystals punctuate rewards. Keep yellow flower fields, gentle green hills and blue sky visible around the train so the game feels open and sunny. Danger comes from motion and opponents, not darkness or grim grading.
+
+SILHOUETTES AND MATERIALS
+Chunky beveled roof panels, bolts, raised vents, orange ladders and attached side walkways. Subtle painted wear is acceptable; broad shapes and clean color areas dominate. The blaster has a recognizable cream shell, orange inset, dark muzzle and a small replaceable energy cell. Exactly two blue armored hands in first-person view. Base robots have rounded purple shells and cyan eyes; shield robots have a wider stance and cyan barrier; jumper robots have spring-like legs. Distinguish enemy types by shape and movement as well as color.
+
+CAMERA AND HUD
+Stable first-person camera around 1.6 m above the roof, starting at 70-degree vertical FOV, with modest recoil and an optional camera-shake slider. Keep the blaster low enough that enemies and roof gaps are readable. The reference's bright reticle, orange ammo numbers and cyan shield indicator should be rebuilt with correct live state. Compass/map marks correspond to the actual route. No full-screen damage overlay that obscures the target colors. Menus retain the blue/orange/cream visual family.
+
+ENVIRONMENT AND FEEDBACK
+Soft clear daylight; distant atmospheric hills; repeating yellow flowers and sparse dark evergreens. The connected train, visible couplings and real rails establish scale. Use concise cyan bolts, orange muzzle sparks and small readable shield ripples. Defeated robots become a few toy-like parts and crystals; no gore. Avoid explosions that fill every pixel. A large white muzzle bloom should not wash out the weapon's color.
+
+STYLE FAILURE TO AVOID
+No military realism, rusty brown train, horror robots, dark tunnel level, generic gray-box arena or saturated neon city. Keep energetic cheerful action and clear roof geometry. Reduce combat density or scenery complexity before changing the established blue/orange/purple/yellow relationships.
+
+STYLE AND COLOR ARE THE HIGHEST PRIORITY
+
+The user explicitly values style and colors above feature breadth. If time or performance forces a tradeoff, reduce the number of environments, secondary mechanics or cosmetic variants while keeping the established visual identity. Do not trade the art direction for an extensive generic prototype. Temporary blockouts may be used internally, but they are not the final appearance.
+
+REFERENCE ORDER
+1. The original gameplay image establishes the main composition, color relationships, lighting and overall feel.
+2. The full development sheet establishes object silhouettes, character identity, materials, modules and UI family. Its tiny generated labels and inconsistent diagrams are not literal rules.
+3. Refined individual scene images explain additional views and mechanics.
+4. The final videos explain motion and pacing, subject to the documented generation errors.
+5. The storyboard grids, early 2x2 drafts and replaced images are historical context. They never override the approved visual direction.
+The new written gameplay specification resolves rule ambiguity. Where an image and a numeric rule disagree, preserve the image's aesthetic while implementing the explicitly stated rule. All tuning values and executable map layouts in this package are new design proposals, not measurements of an existing game.
+
+FIRST VISUAL MILESTONE
+Inspect the actual original image and full sheet with image tools. Read the nine scene images and watch or sample each showcase. Write a short reference analysis stating the dominant color areas, subject proportions, material hierarchy, camera height/framing and UI spacing. Use the supplied semantic palette samples as observed anchors, not automatic PBR albedos. Source images contain lighting, shadows and highlights, so judge the final rendered appearance.
+
+Build one small representative scene with the hero asset, a few environment modules, lighting, camera and final-looking HUD. Use fal for assets that need its capabilities. Capture the scene at a camera comparable to the original. Put reference and implementation side by side. Fix the largest visual differences before expanding the map or adding more asset families. This is an autonomous review checkpoint, not a request for the user to approve every step.
+
+CONTINUOUS STYLE CHECK
+For each new asset, render it inside that same scene, at gameplay scale, under the actual game lighting. Check silhouette, hue/value, material response, relative size, edge treatment and line/detail density. Reject designs that look attractive in isolation but belong to another game. Record changes in STYLE_REVIEW.txt. Before final delivery capture at 1920x1080 and 1280x720; confirm the scene is still recognizable from its broad color masses with the HUD hidden.
+
+Use a 0–5 self-review score for palette relationships, silhouettes/proportions, materials, lighting, camera composition and UI family. Aim for at least 4 in every category; attach visual evidence and unresolved differences. This is an editorial review rubric, not an objective quality guarantee. Pixel differences alone are not a sufficient test because camera geometry and animation vary.
+
+Keep readable UI typography as real text with consistent icon silhouettes and spacing. Recreate generated gibberish with the correct concise labels. Preserve bright daylight, expressive simplified shapes and the intended density of detail. Avoid heavy bloom, excessive depth of field, gritty realism, dark grading and unrelated floating landforms. Preserve small-scale color accents without turning every surface equally saturated.

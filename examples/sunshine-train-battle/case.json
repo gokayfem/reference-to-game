@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "Sunshine Train Battle",
+  "engine": "threejs",
+  "brief": "Clear purple robots across six train cars, jump gaps, manage ammo and shield, and reach the engine.",
+  "references": [
+    {
+      "id": "ref-001",
+      "kind": "image",
+      "priority": 1,
+      "role": "original gameplay",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "gameplay-original.png",
+      "path": "references/ref-001-gameplay-original.png",
+      "sha256": "93791e3f3d91ff5c52725ae844cacecc526c7396f3d254af01d1129bdcacb38e",
+      "inspection": "visually-reviewed"
+    },
+    {
+      "id": "ref-002",
+      "kind": "image",
+      "priority": 2,
+      "role": "development sheet",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "asset-sheet.png",
+      "path": "references/ref-002-asset-sheet.png",
+      "sha256": "23575718a48e75769245db799718a35ebd4f090912e91a927485d5615a646be5",
+      "inspection": "visually-reviewed"
+    }
+  ],
+  "generation": {
+    "enabled": false,
+    "budget_usd": 0
+  },
+  "notes": [
+    "Historical example created before this reusable skill was packaged. Generation disabled by default; no model requests run when opening or building."
+  ]
+}

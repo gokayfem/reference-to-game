@@ -1,0 +1,37 @@
+GAME-SPECIFIC CHECKS
+
+[ ] Click Play, fire, press Escape and resume; pointer lock, held buttons and audio behave correctly without a stuck firing loop.
+
+[ ] Fire 12 rounds and reload with only five reserves; magazine becomes five and reserve zero, with no early count update.
+
+[ ] Shoot a robot behind cover; the nearest cover hit stops the bolt. Test high-speed sweeps against thin targets.
+
+[ ] Hit a shield robot from the front and then its flank; only the intended exposed hit damages it.
+
+[ ] Hold the player shield through several impacts; energy drains correctly, firing is unavailable and empty energy ends the barrier.
+
+[ ] Jump the authored gap at walk speed and deliberately fall; no tunneling and correct checkpoint recovery occur.
+
+[ ] Defeat the same robot during simultaneous hit events; it drops loot once and can be collected once.
+
+[ ] Die after collecting loot, then retry; the checkpoint snapshot prevents duplicate rewards and restores a coherent encounter.
+
+[ ] Complete all six cars, win and restart; gates, enemies, ammo, shield, score and route map reset correctly.
+
+[ ] Inspect the weapon during aim, reload and shielding: exactly two hands, stable geometry, consistent white/orange shell and blue gloves.
+
+COMMON RELEASE CHECKS
+
+[ ] The reference analysis and matched-camera style review exist; style/color differences are listed honestly.
+[ ] The original image, full sheet and all media have been inspected, with generation errors excluded from the game rules.
+[ ] The browser app loads from a clean install and its production build works without the development server's special routes.
+[ ] One full play session reaches a real completion condition, then restart restores the correct initial state.
+[ ] Pause/blur, held-key clearing, audio unlock, mute, window resize and lost pointer lock are handled.
+[ ] Every HUD value follows real state, and simultaneous events cannot duplicate score, inventory or rewards.
+[ ] Runtime asset requests succeed locally. No API credential or reference-video archive appears in the production bundle.
+[ ] The lower-quality mode preserves colors, silhouettes and UI readability. Performance measurements name browser, device and resolution.
+[ ] Existing shared geometry/material resources are not disposed while still in use; repeated restart does not continuously add listeners, scenes or audio loops.
+[ ] Meaningful tests cover the game's rule boundaries and failure recovery. Visual review covers what unit tests cannot establish.
+[ ] Final delivery includes controls, npm scripts, asset manifest/provenance, screenshots, actual play recording and known limitations.
+
+Acceptance boxes start unchecked. This package prepares implementation; it does not claim that the game has been built or tested.

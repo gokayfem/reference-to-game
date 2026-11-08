@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "title": "Jungle Jetboat Jump",
+  "engine": "threejs",
+  "brief": "Steer through ordered gates, collect suns, clear the canyon leap and reach the lagoon.",
+  "references": [
+    {
+      "id": "ref-001",
+      "kind": "image",
+      "priority": 1,
+      "role": "original gameplay",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "gameplay-original.png",
+      "path": "references/ref-001-gameplay-original.png",
+      "sha256": "f6319b3edde77a99365f16b542346521189859bc0bb51e551a842a659affb087",
+      "inspection": "visually-reviewed"
+    },
+    {
+      "id": "ref-002",
+      "kind": "image",
+      "priority": 2,
+      "role": "development sheet",
+      "authority": [
+        "style",
+        "identity",
+        "ui"
+      ],
+      "notes": "",
+      "source": "asset-sheet.png",
+      "path": "references/ref-002-asset-sheet.png",
+      "sha256": "9f469e6620b10c2bc238c8e2838d5b1920bc4caef54fa52d3397edc0b8aa37ec",
+      "inspection": "visually-reviewed"
+    }
+  ],
+  "generation": {
+    "enabled": false,
+    "budget_usd": 0
+  },
+  "notes": [
+    "Historical example created before this reusable skill was packaged. Generation disabled by default; no model requests run when opening or building."
+  ]
+}

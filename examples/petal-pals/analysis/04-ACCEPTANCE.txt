@@ -1,0 +1,37 @@
+GAME-SPECIFIC CHECKS
+
+[ ] Walk the complete camp–bridge–orchard–lookout route and return; the explorer and companions cannot cross unmarked deep water or become permanently stuck.
+
+[ ] Repeatedly open the map/journal, interact and reload a save; exactly three physical party companions remain.
+
+[ ] Photograph one species ten times; the unique species total increases once. An occluded or tiny off-frame animal is not accepted.
+
+[ ] Offer fruit with zero inventory and double-click during an offer; inventory never becomes negative and one completed offer consumes one fruit.
+
+[ ] Visit all four habitats in different orders; each discovery and reward fires once.
+
+[ ] Reach trust threshold without an observe/feed prerequisite; Befriend remains unavailable until both are completed.
+
+[ ] Complete the day using only the initially available and orchard fruit, with no respawn requirement.
+
+[ ] Map marker, camera target, selected subject and journal species agree with actual world state.
+
+[ ] Inspect character faces, leaf cap, petal ears and Bubble tail at gameplay distance; their silhouettes and painted materials remain distinct.
+
+[ ] Record a real walk, feed, shutter, journal and flute sequence; all are interactive rather than video playback.
+
+COMMON RELEASE CHECKS
+
+[ ] The reference analysis and matched-camera style review exist; style/color differences are listed honestly.
+[ ] The original image, full sheet and all media have been inspected, with generation errors excluded from the game rules.
+[ ] The browser app loads from a clean install and its production build works without the development server's special routes.
+[ ] One full play session reaches a real completion condition, then restart restores the correct initial state.
+[ ] Pause/blur, held-key clearing, audio unlock, mute, window resize and lost pointer lock are handled.
+[ ] Every HUD value follows real state, and simultaneous events cannot duplicate score, inventory or rewards.
+[ ] Runtime asset requests succeed locally. No API credential or reference-video archive appears in the production bundle.
+[ ] The lower-quality mode preserves colors, silhouettes and UI readability. Performance measurements name browser, device and resolution.
+[ ] Existing shared geometry/material resources are not disposed while still in use; repeated restart does not continuously add listeners, scenes or audio loops.
+[ ] Meaningful tests cover the game's rule boundaries and failure recovery. Visual review covers what unit tests cannot establish.
+[ ] Final delivery includes controls, npm scripts, asset manifest/provenance, screenshots, actual play recording and known limitations.
+
+Acceptance boxes start unchecked. This package prepares implementation; it does not claim that the game has been built or tested.

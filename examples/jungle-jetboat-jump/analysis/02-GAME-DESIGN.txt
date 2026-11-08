@@ -1,0 +1,19 @@
+Jungle Jetboat Jump
+
+PLAYABLE SCOPE
+Create one complete 75–120 second course, plus a practice/retry flow. The route moves through the starting pool, flower bend, rock slalom, rapid steps, canyon leap and finish lagoon. One connected river should be explorable through movement, rather than a menu switching between showcase cameras. Use the proposed course data as a starting layout and adjust bends for comfortable steering while preserving the reference's sequence and scenery.
+
+CORE LOOP AND CONTROLS
+W/up accelerates; S/down brakes; A/D or left/right steers; Shift spends boost; C toggles chase/cockpit after the chase view is polished; M opens the route overlay; Escape pauses; R retries through the pause/results UI. Show controls before launch. The player steers freely within the river corridor. Gentle downstream current prevents a complete dead stop in rapids but does not replace steering.
+
+SIMULATION
+Maintain position, forward/lateral velocity, heading, throttle, boost, grounded/airborne state and last checkpoint. Start with 14 m/s normal maximum, 20 m/s boosted maximum, 5 m/s² acceleration and 9 m/s² braking. Integrate at a fixed step. Steering authority increases from low speed and tapers at very high speed; bank angle is visual, capped around 16 degrees. Hull/water contact uses a stable analytic surface with small waves. No full fluid solver is needed. Wake trails follow the actual traveled path and clear on teleport/retry.
+
+BOOST AND COLLISION
+Boost capacity is 100, drains 35/s while held and refills 12/s after one second without boost. Rocks and banks use simple swept collision proxies; prevent tunneling at boosted speed. A contact reduces speed, adds a small score penalty and triggers a brief response with a cooldown so one scrape is not charged every simulation tick. Getting stuck or falling outside the valid channel returns the boat to the last checkpoint with a short time penalty and restores a stable heading. Avoid a health/death system in this first course.
+
+CHECKPOINTS, PICKUPS AND JUMP
+Six buoy gates must be crossed in order. Crossing means the hull center passes through a gate plane, within its width and in the forward direction. Gates award once per run. Thirty sun tokens each award 100 points on contact and disappear once. The launch ramp is a real collision surface with a clearly visible landing channel. Start with an 8 m water gap, a roughly 12 m forward landing target, a 6.5 m/s upward launch velocity and 14 m/s² gravity; tune speed and ramp height until the jump is consistently reachable. Allow limited airborne steering. A clean landing inside the marked zone, with modest roll and downward velocity, awards 500 once; a miss uses checkpoint recovery. Space does not provide arbitrary midriver jumping.
+
+RESULTS
+Finish only after all gates and crossing the finish plane. Show elapsed time, collected suns, collision penalties, landing bonus and final score from state. Suggested stars: one for finishing, two for at least 20 suns and no more than three recoveries, three for at least 25 suns, a clean landing and a run under 110 seconds. Tune after playtesting. Persist personal-best time and score, not temporary pickup state. Restart resets timer, gates, tokens, collision cooldowns, boost, camera damping and audio loops.

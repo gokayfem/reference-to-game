@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jellyworks</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 3l3.8 8 8.7 1-6.4 6 1.7 8.6L16 22.4 8.2 26.6 9.9 18 3.5 12l8.7-1z' fill='%23ff8a1c'/></svg>" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="hud" class="hidden">
+    <div class="card moves" id="movesCard">
+      <div class="disc"><svg viewBox="0 0 40 40"><path d="M11 12l8 8-8 8M20 12l8 8-8 8" fill="none" stroke="#3a9c8c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><div class="lbl">MOVES</div><div class="val" id="movesVal">0 / 0</div></div>
+      <div class="undo-row">
+        <button class="mini" id="undoBtn" title="Undo (Ctrl+Z)"><img src="assets/ui/icon-undo.png" alt="" /></button>
+        <button class="mini flip" id="redoBtn" title="Redo (Ctrl+Shift+Z)"><img src="assets/ui/icon-undo.png" alt="" /></button>
+      </div>
+    </div>
+    <div class="plaque" id="titlePlaque"><span class="cane l"></span><span class="txt">LEVEL <b id="levelNum">1</b> / <span id="levelName">CONNECT</span></span><span class="cane r"></span></div>
+    <div class="card goalstars" id="starCard"><div class="stars" id="projStars"></div><div class="lbl small">GOAL</div></div>
+    <button class="gear" id="gearBtn" title="Settings"><svg viewBox="0 0 40 40"><path fill="#3f9a8c" d="M17.4 3h5.2l.8 4.3 2.6 1.1 3.6-2.5 3.7 3.7-2.5 3.6 1.1 2.6 4.3.8v5.2l-4.3.8-1.1 2.6 2.5 3.6-3.7 3.7-3.6-2.5-2.6 1.1-.8 4.3h-5.2l-.8-4.3-2.6-1.1-3.6 2.5-3.7-3.7 2.5-3.6-1.1-2.6L3 22.6v-5.2l4.3-.8 1.1-2.6-2.5-3.6 3.7-3.7 3.6 2.5 2.6-1.1zM20 14a6 6 0 100 12 6 6 0 000-12z"/></svg></button>
+    <div class="goals" id="goalList"></div>
+    <div class="tip hidden" id="tip"><span id="tipText"></span><span class="x">✕</span></div>
+    <div class="status hidden" id="statusPill"></div>
+    <div class="inspect hidden" id="inspect"></div>
+    <div class="toolbar" id="toolbar">
+      <div class="tray">
+        <button class="tool" data-tool="belt"><img src="assets/ui/icon-belt.png" alt="" /><span>BELT</span><kbd>1</kbd></button>
+        <button class="tool" data-tool="turn"><img src="assets/ui/icon-turn.png" alt="" /><span>TURN</span><kbd>2</kbd></button>
+        <button class="tool" data-tool="split"><img src="assets/ui/icon-split.png" alt="" /><span>SPLIT</span><kbd>3</kbd></button>
+        <button class="tool" data-tool="merge"><img src="assets/ui/icon-merge.png" alt="" /><span>MERGE</span><kbd>4</kbd></button>
+        <button class="tool" data-tool="mix"><img src="assets/ui/icon-mix.png" alt="" /><span>MIX</span><kbd>5</kbd></button>
+        <button class="tool" data-tool="mold"><img src="assets/ui/icon-mold.png" alt="" /><span>MOLD</span><kbd>6</kbd></button>
+        <button class="tool" data-tool="erase"><img src="assets/ui/icon-erase.png" alt="" /><span>ERASE</span><kbd>7</kbd></button>
+        <button class="run" id="runBtn"><svg viewBox="0 0 30 30"><path d="M8 5l17 10-17 10z" fill="#fff"/></svg><span id="runLbl">RUN<br/>FACTORY</span></button>
+        <button class="round" id="resetBtn"><svg viewBox="0 0 40 40"><path d="M30 14a12 12 0 10 2 9" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round"/><path d="M31 6v9h-9" fill="none" stroke="#fff" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="resetLbl">RESET</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="title" class="screen">
+    <div class="title-card">
+      <div class="logo"><span class="cane l"></span>JELLYWORKS<span class="cane r"></span></div>
+      <div class="sub">A candy factory routing puzzle</div>
+      <div class="levels" id="levelCards"></div>
+      <div class="loading" id="loading">Loading candy factory… <span id="loadPct">0%</span></div>
+      <button class="big-btn hidden" id="playBtn">PLAY</button>
+      <div class="controls-hint">Click a tool, then click a tile · <b>R</b> rotate · <b>Shift+R</b> rotate back · <b>F</b> mirror turn · <b>Ctrl+Z</b> undo · <b>Space</b> run / stop</div>
+    </div>
+  </div>
+
+  <div id="complete" class="screen hidden">
+    <div class="panel">
+      <div class="panel-title">LEVEL COMPLETE</div>
+      <div class="big-stars" id="doneStars"></div>
+      <div class="panel-sub" id="doneText"></div>
+      <div class="row"><button class="ghost-btn" id="replayBtn">REPLAY</button><button class="ghost-btn" id="levelsBtn">LEVELS</button><button class="big-btn small" id="nextBtn">NEXT PUZZLE</button></div>
+    </div>
+  </div>
+
+  <div id="settings" class="screen hidden">
+    <div class="panel">
+      <div class="panel-title">SETTINGS</div>
+      <label class="setrow">Music <input type="range" id="musicVol" min="0" max="1" step="0.05" /></label>
+      <label class="setrow">Effects <input type="range" id="sfxVol" min="0" max="1" step="0.05" /></label>
+      <label class="setrow">Mute <input type="checkbox" id="muteChk" /></label>
+      <label class="setrow">Quality <select id="qualitySel"><option value="high">High (translucent candy)</option><option value="low">Low (faster)</option></select></label>
+      <div class="row"><button class="ghost-btn" id="setLevelsBtn">LEVELS</button><button class="ghost-btn" id="restartBtn">RESTART LEVEL</button><button class="big-btn small" id="closeSet">RESUME</button></div>
+    </div>
+  </div>
+  <div id="error" class="screen hidden"><div class="panel"><div class="panel-title">Something went wrong</div><div class="panel-sub" id="errorText"></div></div></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

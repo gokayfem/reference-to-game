@@ -1,0 +1,84 @@
+JUNGLE JETBOAT JUMP — THREE.JS — STATUS                                  updated 2026-11-09 00:25 local (variety pass)
+Model/effort: Claude Opus 5.5, Medium.
+
+PHASE
+Complete playable build + second style-polish pass (milestones: reference analysis -> matched scene + HUD ->
+11 autonomous style iterations -> full mechanics/progression/audio -> rule tests -> production build ->
+recorded input-driven playthroughs). Not published or deployed.
+Second pass added: fal eroded sandstone canyon kit, fal painted foliage/flower/vine alpha cards, rebuilt
+particle spray (flat spray-sheet meshes removed), lacy wake, readable rapid steps, planked ramp, verified no leak,
+fal painted trees, hull rim light, and a rebuilt water shader (waves, reflection, glints, foam, bubbles).
+
+VARIETY PASS (latest)
+- 5-piece fal sandstone kit (module, tall pillar, wide terrace, overhang/cave, rounded mesa) with shape-aware
+  random choice, mirroring and near/far LOD; 3 fal boulders; 12 painted plant kinds in 4 drifting bank biomes;
+  5 painted tree kinds. Scenery seed is random per load (?seed=N reproduces); gameplay layout fixed.
+- Fixed: cliff fronts previously faced sideways; fal boulder albedo too dark (lifted in engine).
+
+PREVIEW URLS (all bound to 127.0.0.1)
+  Dev server ............ http://127.0.0.1:5171/   (npm run dev; requested port, was free)
+  Production build ...... http://127.0.0.1:5176/   (npm run preview, serves app/dist)
+  Playtest build ........ http://127.0.0.1:5177/   (npm run preview:playtest; same build + inspection hook)
+  Ports 5172/5173/5174 are the sibling games' dev servers and were left untouched.
+
+WHAT IS WORKING
+- One connected 1,109 m river: starting pool, flower bend, rock slalom, rapid steps (3 water drops),
+  canyon leap (real ramp + cascade gap + green landing ellipse), finish lagoon with arch.
+- Controls: W/S/A/D or arrows, Shift boost, C chase/cockpit, M route map, Esc pause, R retry (pause/results),
+  N mute, pause-menu music/effects volume, quality (high/low), camera select. Controls shown on title screen.
+- Fixed 1/60 s sim + interpolation, bounded accumulator, pause on blur/visibility, held keys cleared.
+- 6 ordered forward-only gates, 30 sun tokens (stable IDs), swept rock/bank collision with 1 s penalty
+  cooldown, checkpoint recovery (+3 s), stuck detection, finish gated on all gates, results + stars,
+  versioned localStorage personal best with corruption recovery.
+- HUD: emblem + timer plate, score card, gate/sun chips, cyan speed card (km/h from m/s), boost bar,
+  zone banners, toasts, countdown — all derived from Session state.
+- Audio: fal engine loop (pitch from throttle/speed), river bed, music, splash/pickup/gate/scrape/boost cues;
+  loops restarted cleanly (always exactly 3 active), one-shots rate-limited.
+- Crew: exactly two fal-generated characters on fixed seat sockets; lean, brace, head turn and celebration
+  driven from steer/airborne/landing/finish state; steering wheel turns with input.
+
+BUILD / TEST RESULTS
+- npm test: 16/16 vitest pass (projection; gates backward/repeat/out-of-order/outside width; token once;
+  boosted narrowest rock no tunneling + cooldown; banks; leap clean at 12/14/17/20 m/s; slow approach falls
+  into gap -> recovery/time penalty/no bonus; finish blocked without a gate; results from state; stars;
+  identical sim at 30/60/120 fps; boost drain/refill; reset; corrupted save).
+- npm run build: OK (tsc + vite). dist = 11 MB (plants atlas 2.3 MB) (JS ~715 kB / ~195 kB gz, models 3.2 MB, audio 2.5 MB, foliage+tree atlases 0.6 MB).
+  No FAL key, fal URLs, debug hook or reference media in dist (grep-verified).
+- Production-build playthrough (npm run playthrough, trusted CDP keyboard input only, headless Chrome):
+  run 1 72.12 s, 6/6 gates, 28/30 suns, clean leap, 2 hits, 0 recoveries, 6,615 pts, 3 stars;
+  pause froze timer; route map; R from results -> time 0, 30 tokens, 0 gates, boost 100, 3 loops;
+  cockpit toggle; Esc+R while airborne -> clean start; run 2 71.23 s, 3 stars; pickup sound count == pickups;
+  0 failed requests, 0 console errors. Log: app/review/playthrough-prod.log
+- Performance (app/review/perf.jsonl; headless Chrome 1920x1080 & 1280x720, Apple M4 via ANGLE Metal, DPR 1):
+  high 60 fps (vsync cap), worst frame ~20 ms, 217 draw calls, ~2.1 M triangles (incl. shadow pass);
+  low 60 fps, ~1.5 M triangles (cliff shadow casting off). Above the proposed 150 calls / 500k tris starting
+  budget — measured, not hidden. Restart x5 after warming every section: geometries/textures/programs/loops identical
+  (100-106 geos is lazy first upload, not a leak).
+
+REFERENCE-MATCH OBSERVATIONS (details + scores: app/review/STYLE_REVIEW.txt)
+- Side-by-side: app/review/final-1920-side-by-side.jpg, final-1920-nohud-side-by-side.jpg, final-1280-side-by-side.jpg
+- Scores: palette 4.5, silhouettes 4.5, materials 4.5, lighting 4, camera 4, UI 5 (were 4/4/3/4/4/5).
+- Matches: turquoise-vs-red-sandstone palette, eroded stepped cliffs with mossy ledges and vines, painted
+  broadleaf/fern/pink-flower banks, boat/crew identity and scale, rear-3/4 yaw-lagged framing, HUD family.
+  Gaps: stern spray smaller/grainier than the painted curl, water less glossy than the painting, some slot sections.
+
+FAL ASSETS / JOBS (production/fal/COST_LOG.txt, job-ledger.json, raw outputs in production/fal/raw/)
+  40 requests, all completed and integrated, none retried or duplicated; est. total ~$6-9.
+  Pass 2: sandstone image -> Tripo module; foliage sheet and tree sheet -> BiRefNet alpha atlases.
+  3x nano-banana-pro/edit isolations (boat, driver, passenger) -> 3x tripo3d/h3.1 meshes -> Blender normalize;
+  7x elevenlabs/sound-effects/v3; 1x fal-ai/elevenlabs/music (75 s). Actual charges unreadable with this key.
+
+RECORDING
+  app/review/gameplay-recording.mp4 (1280x720, ~3.8 min, H.264): two full runs, pause, map, restart,
+  cockpit view and mid-air retry, driven by real keyboard events from an autopilot script.
+  Frames: app/review/playthrough-prod/*.png, contact sheet app/review/gameplay-contact-sheet.jpg
+
+NEXT CONCRETE STEPS (if continued)
+  1. Painted stern-spray flipbook/mesh for the big white curl. 2. Glossier painterly water highlights.
+  3. Wider sky openings in slot sections. 4. Trim triangles (module LOD for far chunks) and draw calls.
+
+EXACT BLOCKERS / LIMITATIONS
+- None blocking. fal usage/billing endpoint returns authorization_error for this key, so costs are estimates.
+- The recording is autopilot-driven through trusted keyboard events, not a human at the keyboard.
+- Performance measured only on this Mac (M4); no lower-end device tested. Touch controls not implemented.
+- No pointer lock is used (chase camera), so lost-pointer-lock handling is not applicable.

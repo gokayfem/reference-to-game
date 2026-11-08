@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jungle Jetboat Jump</title>
+  <link rel="icon" href="data:," />
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="ui">
+    <!-- HUD -->
+    <div id="hud" class="hidden">
+      <div class="emblem-wrap">
+        <div class="emblem">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <radialGradient id="eg" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#1d4a5c"/><stop offset="1" stop-color="#0e2533"/></radialGradient>
+              <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#f7a823"/></linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="47" fill="url(#eg)" stroke="#3fb7c4" stroke-width="3"/>
+            <circle cx="50" cy="50" r="41" fill="none" stroke="#1f6c7a" stroke-width="1.5"/>
+            <g fill="url(#sg)">
+              <path d="M27 52 A23 23 0 0 1 73 52 Z"/>
+              <g stroke="#ffc52e" stroke-width="4" stroke-linecap="round">
+                <line x1="50" y1="18" x2="50" y2="25"/><line x1="31" y1="26" x2="35" y2="31"/><line x1="69" y1="26" x2="65" y2="31"/>
+                <line x1="20" y1="40" x2="26" y2="42"/><line x1="80" y1="40" x2="74" y2="42"/>
+              </g>
+            </g>
+            <g fill="none" stroke="#f3f7f6" stroke-width="4.2" stroke-linecap="round">
+              <path d="M20 58 q7.5 -6 15 0 t15 0 t15 0 t15 0"/>
+              <path d="M22 68 q7 -5.5 14 0 t14 0 t14 0 t14 0" stroke="#bfe9ee"/>
+              <path d="M27 77 q6 -5 12 0 t12 0 t12 0" stroke="#7fd0da"/>
+            </g>
+            <path d="M50 1 l-4 6 h8z M50 99 l-4 -6 h8z" fill="#9fd9df"/>
+          </svg>
+        </div>
+        <div class="timer" id="timer">0:00</div>
+      </div>
+      <div class="score-card"><span class="label">SCORE</span><span class="value" id="score">0</span></div>
+      <div class="chips">
+        <div class="chip" id="gateChip"><svg viewBox="0 0 24 24"><path d="M5 21V5h2v16zm12 0V5h2v16zM7 6h10v4H7z" fill="#57e08a"/><path d="M8 6.5h2l-1 3H7zm4 0h2l-1 3h-2z" fill="#f5d33f"/></svg><span id="gates">GATE 0/6</span></div>
+        <div class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="#ffc531"/><g stroke="#ffc531" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg><span id="suns">0/30</span></div>
+      </div>
+      <div class="speed-card"><span class="label">SPEED</span><span class="value" id="speed">0</span><span class="unit">KM/H</span></div>
+      <div class="zone" id="zone"></div>
+      <div class="boost"><div class="boost-label" id="boostLabel">BOOST READY</div><div class="boost-bar"><div id="boostFill"></div></div><div class="boost-key">SHIFT</div></div>
+      <div class="toasts" id="toasts"></div>
+      <div class="countdown" id="countdown"></div>
+      <div class="hint" id="hint"></div>
+      <button class="icon-btn" id="muteBtn" title="Mute (N)">♪</button>
+      <canvas id="minimap" class="hidden" width="360" height="360"></canvas>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading" class="screen">
+      <div class="logo"><span>JUNGLE JETBOAT JUMP</span></div>
+      <div class="load-bar"><div id="loadFill"></div></div>
+      <div id="loadText">Loading boat, crew and canyon…</div>
+    </div>
+
+    <!-- Title -->
+    <div id="title" class="screen hidden">
+      <div class="logo"><span>JUNGLE JETBOAT JUMP</span></div>
+      <div class="ribbon">FASTER RIVERS. BRIGHTER DAYS.</div>
+      <div class="panel controls-panel">
+        <div class="ctl"><kbd>W</kbd><kbd>↑</kbd><span>Throttle</span></div>
+        <div class="ctl"><kbd>S</kbd><kbd>↓</kbd><span>Brake / reverse</span></div>
+        <div class="ctl"><kbd>A</kbd><kbd>D</kbd><span>Steer</span></div>
+        <div class="ctl"><kbd>Shift</kbd><span>Boost</span></div>
+        <div class="ctl"><kbd>C</kbd><span>Chase / cockpit</span></div>
+        <div class="ctl"><kbd>M</kbd><span>Route map</span></div>
+        <div class="ctl"><kbd>Esc</kbd><span>Pause · <kbd>R</kbd> retry</span></div>
+        <div class="ctl"><kbd>N</kbd><span>Mute</span></div>
+      </div>
+      <p class="goal">Pass all <b>6 buoy gates</b> in order, grab <b>sun tokens</b>, hit the ramp at speed and land inside the <b class="green">green ring</b> for the canyon leap bonus.</p>
+      <button class="btn primary" id="startBtn">START RUN</button>
+      <div class="best" id="bestLine"></div>
+    </div>
+
+    <!-- Pause -->
+    <div id="pause" class="screen dim hidden">
+      <div class="panel card">
+        <h2>PAUSED</h2>
+        <button class="btn primary" id="resumeBtn">RESUME</button>
+        <button class="btn" id="retryBtn">RETRY <small>(R)</small></button>
+        <label>Music <input type="range" id="musicVol" min="0" max="1" step="0.05" /></label>
+        <label>Effects <input type="range" id="sfxVol" min="0" max="1" step="0.05" /></label>
+        <label class="row"><input type="checkbox" id="muteChk" /> Mute all</label>
+        <label class="row">Quality <select id="qualitySel"><option value="high">High</option><option value="low">Low (performance)</option></select></label>
+        <label class="row">Camera <select id="camSel"><option value="chase">Chase</option><option value="cockpit">Cockpit</option></select></label>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="screen dim hidden">
+      <div class="panel results-card">
+        <div class="res-head">COURSE CLEAR</div>
+        <div class="stars" id="stars"></div>
+        <div class="res-grid" id="resGrid"></div>
+        <div class="res-total"><span>SCORE</span><span id="resScore">0</span></div>
+        <div class="res-best" id="resBest"></div>
+        <div class="res-btns"><button class="btn primary" id="againBtn">RETRY RUN</button><button class="btn" id="menuBtn">TITLE</button></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

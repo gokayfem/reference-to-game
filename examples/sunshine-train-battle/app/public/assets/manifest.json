@@ -1,0 +1,79 @@
+{
+ "version": 1,
+ "units": "meters, Y-up, forward -Z for first-person items / +Z for the train",
+ "models": {
+  "energy-blaster.glb": {
+   "source": "fal hunyuan3d-v3 (see production/ASSET_LOG.md)",
+   "importCorrection": "rotateY(+90deg) so muzzle +X becomes -Z",
+   "lengthMeters": 0.6,
+   "sockets": [
+    "muzzle",
+    "grip",
+    "foreEnd",
+    "slot",
+    "latch"
+   ],
+   "socketSource": "derived from bounds in src/world/weaponView.ts setModel()",
+   "collider": "none (view-model only)"
+  },
+  "hands/*.glb": {
+   "source": "fal nano-banana-pro concept \u2192 hunyuan3d-v3 per pose (see production/ASSET_LOG.md)",
+   "poses": {
+    "grip": "right",
+    "support": "left",
+    "open": "left (mirrored from generated right-hand back view)",
+    "cell": "left, holds an energy cell"
+   },
+   "frame": "wrist at origin, forearm +Z, back of hand +Y, fingers -Z",
+   "alignment": "src/data/handAlign.ts",
+   "sockets": "weaponView sockets grip/foreEnd/latch; left hand blends to belt and barrier targets"
+  },
+  "robots/*.glb": {
+   "source": "fal nano-banana-pro concept \u2192 hunyuan3d-v3 per type (see production/ASSET_LOG.md)",
+   "normalisation": "feet at y=0, face +Z, heights base 1.2 / shield 1.3 / jumper 1.15 m (src/data/robotModels.ts)",
+   "rig": "vertex shader: legs below hipY stride/squash, arms beyond shoulderX raise on telegraph",
+   "colliders": "sphere hitboxes in src/game/game.ts robotCenter/robotRadius; shield barrier generated in engine"
+  }
+ },
+ "textures": {
+  "roof-metal.jpg": {
+   "colorSpace": "sRGB",
+   "wrap": "repeat"
+  },
+  "meadow.jpg": {
+   "colorSpace": "sRGB",
+   "wrap": "repeat",
+   "tileMeters": 7
+  },
+  "flower-atlas.png": {
+   "colorSpace": "sRGB",
+   "alpha": true,
+   "layout": "2x2: flower, cluster / grass, pine"
+  },
+  "tree-atlas.png": {
+   "colorSpace": "sRGB",
+   "alpha": true,
+   "layout": "2x2: round tree, pines / bush, boulder"
+  },
+  "backdrop.jpg": {
+   "colorSpace": "sRGB",
+   "wrap": "mirrored-repeat x4"
+  }
+ },
+ "audio": [
+  "shot",
+  "shieldhit",
+  "reload",
+  "robotshot",
+  "hit",
+  "pickup",
+  "defeat",
+  "land",
+  "victory",
+  "unlock",
+  "hurt",
+  "trainloop",
+  "music"
+ ],
+ "colliders": "authored in src/game/level.ts (independent of meshes)"
+}
