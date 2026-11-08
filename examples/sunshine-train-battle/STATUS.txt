@@ -1,1 +1,8 @@
-Intake complete. References preserved; visual inspection and implementation are pending.
+REPOSITORY EXAMPLE — imported 2026-11-09
+
+Playable source and runtime assets are included in app/.
+Fresh repository checks: clean npm install, 24 rule tests and production build passed.
+Original gameplay reference, full development sheet and visual comparison are included.
+Historical full-session and performance results: HISTORICAL-REPORT.txt.
+A fresh full browser playthrough was not repeated during repository packaging.
+review.json remains pending until a new source-bound review is performed.
