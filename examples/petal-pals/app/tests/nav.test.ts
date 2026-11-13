@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { beforeAll, describe, it, expect } from 'vitest';
 import { NavGrid, walkable, bridgeAt, BRIDGES, LM, START, riverInfo, riverHalfAt } from '../src/world/layout';
 
 describe('world walkability', () => {
@@ -17,16 +17,6 @@ describe('world walkability', () => {
     expect(walkable(cx, z, 'bubble')).toBe(true);
     expect(walkable(cx, z, 'land')).toBe(false);
   });
-  it('a path exists start→camp→lookout→orchard→start for land companions (via bridges)', () => {
-    const nav = new NavGrid('land', 0.25);
-    const route: [number, number][] = [START, LM.camp, [34, -29], LM.orchard, LM.sunflowers, START];
-    for (let i = 0; i < route.length - 1; i++) {
-      const p = nav.findPath(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1], 80000);
-      expect(p, `leg ${i}`).not.toBeNull();
-      // every waypoint is on walkable ground
-      for (const w of p!) expect(nav.okWorld(w[0], w[1])).toBe(true);
-    }
-  });
   it('the explorer start and habitat centres are walkable', () => {
     for (const p of [START, LM.camp, LM.orchard, LM.sunflowers, LM.riverbank]) expect(walkable(p[0], p[1], 'explorer')).toBe(true);
   });
@@ -38,6 +28,23 @@ describe('bridges span the widened river', () => {
       const x = e[0] + b.dir[0] * s * 1.0, z = e[1] + b.dir[1] * s * 1.0;
       expect(riverInfo(x, z).d, `${b.id}`).toBeGreaterThan(riverHalfAt(x, z));
       expect(walkable(x, z, 'explorer'), `${b.id} end`).toBe(true);
+    }
+  });
+});
+
+// Build the full-resolution world fixture outside the route assertions.
+describe('land companion routes', () => {
+  let nav: NavGrid;
+  beforeAll(() => {
+    nav = new NavGrid('land', 0.25);
+  });
+  it('a path exists start→camp→lookout→orchard→start for land companions (via bridges)', () => {
+    const route: [number, number][] = [START, LM.camp, [34, -29], LM.orchard, LM.sunflowers, START];
+    for (let i = 0; i < route.length - 1; i++) {
+      const p = nav.findPath(route[i][0], route[i][1], route[i + 1][0], route[i + 1][1], 80000);
+      expect(p, `leg ${i}`).not.toBeNull();
+      // every waypoint is on walkable ground
+      for (const w of p!) expect(nav.okWorld(w[0], w[1])).toBe(true);
     }
   });
 });
