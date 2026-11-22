@@ -90,6 +90,8 @@ python3 -m pip install -r skills/reference-to-game/scripts/requirements.txt
 
 ## Use
 
+To turn a single reference into an illustrated game development sheet, attach your image to an image editor and use one of the [reference-to-sheet prompts](prompts/reference-to-sheet.md). Each prompt includes a worked input/output pair. You can then give the original and your finished sheet to the game-building workflow below.
+
 Ask naturally:
 
 > “Make a playable Three.js game from this image and full development sheet. The style and colors are the most important part. You can create fal assets.”
